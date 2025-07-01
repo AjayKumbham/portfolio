@@ -1,27 +1,26 @@
-
 export const educationData = [
   {
     id: 1,
-    qualification: "B.Tech in Computer Science and Engineering",
-    institution: "ABC Institute of Technology",
-    university: "JNTU Hyderabad",
-    duration: "Aug 2021 – May 2025",
-    result: "CGPA: 8.6 / 10"
+    qualification: "B.Tech in Computer Science",
+    institution: "Vardhaman College of Engineering",
+    university: "JNTUH, Hyderabad",
+    duration: "2022 – 2026",
+    result: "CGPA: 9.71 / 10"
   },
   {
     id: 2,
-    qualification: "Class 12 (PCM)",
-    institution: "Delhi Public School, Hyderabad",
-    university: "CBSE",
-    duration: "2019 – 2021",
-    result: "91.4%"
+    qualification: "Intermediate in MPC",
+    institution: "SR Junior College",
+    university: "Telangana Board of Intermediate Education (TGBIE)",
+    duration: "2020 – 2022",
+    result: "Percentage: 98.4 / 100"
   },
   {
     id: 3,
-    qualification: "Class 10",
-    institution: "St. Xavier's High School, Secunderabad",
-    university: "State Board of Telangana",
-    duration: "2017 – 2019",
-    result: "93.8%"
+    qualification: "10th Class",
+    institution: "SR Digi School",
+    university: "Board of Secondary Education (BSE), Telangana",
+    duration: "Completed in 2020",
+    result: "GPA: 10 / 10"
   }
 ];
