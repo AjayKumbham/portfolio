@@ -1,43 +1,42 @@
-
 export const achievementsData = [
   {
     id: 1,
-    title: "Top 1% in NPTEL Course: Machine Learning",
-    institution: "IIT Madras",
-    date: "2023",
-    rank: "Gold Medal",
-    performance: "Top 1% nationally",
+    title: "Top 1% All India, NPTEL Java Programming",
+    institution: "IIT Kharagpur",
+    date: "Apr 2024",
+    rank: "Elite + Topper",
+    performance: "Earned Elite + Topper distinction among 14,000+ certified candidates nationwide.",
     icon: "🏆",
-    certificateImage: "/data/images/certificates/nptel-ml.jpg" // Place certificate images in public/data/images/certificates/
+    certificateImage: null
   },
   {
     id: 2,
-    title: "Top 1% in NPTEL Course: Data Science",
-    institution: "IIT Bombay",
-    date: "2023",
-    rank: "Elite Score",
-    performance: "Top 1% nationally",
-    icon: "🏆",
-    certificateImage: "/data/images/certificates/nptel-ds.jpg"
+    title: "Top 1% All India, NPTEL Cloud Computing & Distributed Systems",
+    institution: "IIT Kanpur",
+    date: "Mar 2025",
+    rank: "Gold + Topper",
+    performance: "Secured Gold + Topper distinction with highest honor of Gold Certificate awarded by IIT Kanpur.",
+    icon: "🥇",
+    certificateImage: null
   },
   {
     id: 3,
-    title: "Ranked 2nd in CSE Department",
-    institution: "ABC Institute",
-    date: "2022",
-    rank: "2nd Position",
-    performance: "Among 300+ peers",
-    icon: "🥈",
-    certificateImage: "/data/images/certificates/department-rank.jpg"
+    title: "Secured AIR 6600 in GATE 2025, Computer Science",
+    institution: "IIT Roorkee",
+    date: "Feb 2025",
+    rank: "AIR 6600",
+    performance: "Ranked among 1.7 lakh+ candidates in one of India's most competitive engineering exams.",
+    icon: "🎓",
+    certificateImage: null
   },
   {
     id: 4,
-    title: "Qualified GATE 2024 (CS)",
-    institution: "National Testing Agency",
-    date: "2024",
-    rank: "AIR 6,600",
-    performance: "Top 3.6% out of 1.8 lakh+",
-    icon: "🏆",
-    certificateImage: "/data/images/certificates/gate-2024.jpg"
+    title: "Academic Excellence Award – B.Tech CSE",
+    institution: "Vardhaman College of Engineering",
+    date: null,
+    rank: "2nd Position in CSE Dept.",
+    performance: "Secured 2nd position in the entire Computer Science & Engineering department, recognized for outstanding academic performance.",
+    icon: "🏅",
+    certificateImage: null
   }
 ];
