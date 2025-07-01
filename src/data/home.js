@@ -1,6 +1,6 @@
 export const homeData = {
   name: "Kumbham Ajay Goud",
-  title: "Computer Science Graduate", 
+  title: "Computer Science Undergraduate", 
   tagline: "Passionate about creating innovative solutions and building amazing user experiences",
   profileImage: "/data/images/profile.jpg", // Local path to your profile image
   stats: {
@@ -8,7 +8,7 @@ export const homeData = {
     nptelDescription: "NPTEL Top 1%",
     projectsCount: "10+", 
     projectsDescription: "Projects Built",
-    cgpa: "8.5/10",
+    cgpa: "9.71",
     cgpaDescription: "CGPA"
   }
 };
