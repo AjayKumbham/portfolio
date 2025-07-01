@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { technicalSoftSkills, hackathonsAndEvents, certificationsData } from "../data/certifications";
+import { certificationsData } from "../data/certifications";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -162,8 +161,6 @@ const Certifications: React.FC = () => {
   // Combine all certifications into one array
   const allCertifications = [
     ...(certificationsData || []),
-    ...technicalSoftSkills,
-    ...hackathonsAndEvents
   ];
 
   return (
