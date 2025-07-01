@@ -1,6 +1,5 @@
-
 export const homeData = {
-  name: "Alex Johnson",
+  name: "Kumbham Ajay Goud",
   title: "Computer Science Graduate", 
   tagline: "Passionate about creating innovative solutions and building amazing user experiences",
   profileImage: "/data/images/profile.jpg", // Local path to your profile image

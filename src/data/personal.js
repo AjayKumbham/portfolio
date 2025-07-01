@@ -1,6 +1,5 @@
-
 export const personalInfo = {
-  name: "Alex Johnson",
+  name: "Kumbham Ajay Goud",
   title: "Computer Science Graduate",
   tagline: "Passionate about creating innovative solutions and building amazing user experiences",
   bio: "I'm a recent Computer Science graduate with a strong foundation in full-stack development and a passion for learning new technologies. I love solving complex problems and turning ideas into functional, beautiful applications.",
