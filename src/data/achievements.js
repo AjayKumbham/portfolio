@@ -15,7 +15,7 @@ export const achievementsData = [
     institution: "IIT Kanpur",
     date: "Mar 2025",
     rank: "Gold + Topper",
-    performance: "Secured Gold + Topper distinction with highest honor of Gold Certificate awarded by IIT Kanpur.",
+    performance: "Secured Gold + Topper distinction with the highest honor of Gold Certificate.",
     icon: "🥇",
     certificateImage: null
   },
@@ -35,7 +35,7 @@ export const achievementsData = [
     institution: "Vardhaman College of Engineering",
     date: null,
     rank: "2nd Position in CSE Dept.",
-    performance: "Secured 2nd position in the entire Computer Science & Engineering department, recognized for outstanding academic performance.",
+    performance: "Secured 2nd position in the entire CSE department, recognized for outstanding academic performance.",
     icon: "🏅",
     certificateImage: null
   }

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { achievementsData } from '../data/achievements';
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Eye } from "lucide-react";
+import { Eye, Trophy, MapPin, Calendar, TrendingUp, FileText } from "lucide-react";
 
 const Achievements: React.FC = () => {
   const [selectedAchievement, setSelectedAchievement] = useState<any | null>(null);
@@ -27,88 +27,102 @@ const Achievements: React.FC = () => {
               key={achievement.id}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-xl transition-all duration-300"
             >
-              {/* Header with Icon and Title */}
+              {/* Title / Distinction */}
               <div className="flex items-start gap-3 mb-4">
-                <div className="text-2xl flex-shrink-0 mt-1">
-                  {achievement.icon}
-                </div>
+                <Trophy className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" />
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-tight mb-1">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
                     {achievement.title}
                   </h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm">
-                    {achievement.institution}
+                </div>
+              </div>
+
+              {/* Context / Organization */}
+              <div className="flex items-center gap-2 mb-3">
+                <MapPin className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm">
+                  {achievement.institution}
+                </p>
+              </div>
+
+              {/* Date */}
+              <div className="flex items-center gap-2 mb-3">
+                <Calendar className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  {achievement.date}
+                </span>
+              </div>
+
+              {/* Ranking or Impact */}
+              <div className="flex items-center gap-2 mb-4">
+                <TrendingUp className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="text-sm font-semibold text-gray-900 dark:text-white">
+                    {achievement.rank}
+                  </div>
+                  <div className="text-sm text-green-600 dark:text-green-400">
+                    {achievement.performance}
+                  </div>
+                </div>
+              </div>
+
+              {/* Short Description (conditional rendering) */}
+              {achievement.description && (
+                <div className="flex items-start gap-2 mb-4">
+                  <FileText className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {achievement.description}
                   </p>
                 </div>
-              </div>
+              )}
 
-              {/* Performance Stats */}
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Rank/Achievement:</span>
-                  <span className="text-sm font-semibold text-gray-900 dark:text-white">
-                    {achievement.rank}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Performance:</span>
-                  <span className="text-sm font-semibold text-green-600 dark:text-green-400">
-                    {achievement.performance}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Year:</span>
-                  <span className="text-sm font-semibold text-gray-900 dark:text-white">
-                    {achievement.date}
-                  </span>
-                </div>
-              </div>
-
-              {/* View Certificate Button */}
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button
-                    type="button"
-                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2.5 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
-                    onClick={() => setSelectedAchievement(achievement)}
-                  >
-                    <Eye className="w-4 h-4" />
-                    View Certificate
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-2xl w-full max-h-[90vh] p-0">
-                  <div className="relative">
-                    <img
-                      src={achievement.certificateImage}
-                      alt={`${achievement.title} Certificate`}
-                      className="w-full h-auto max-h-[70vh] object-contain rounded-t-lg"
-                    />
-                    <div className="p-6 bg-white dark:bg-gray-800">
-                      <div className="flex items-start gap-3 mb-3">
-                        <span className="text-2xl">{achievement.icon}</span>
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                            {achievement.title}
-                          </h3>
-                          <p className="text-blue-600 dark:text-blue-400 font-semibold">
-                            {achievement.institution}
-                          </p>
+              {/* Conditional View Certificate Button */}
+              {achievement.certificateImage && (
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2.5 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
+                      onClick={() => setSelectedAchievement(achievement)}
+                    >
+                      <Eye className="w-4 h-4" />
+                      View Certificate
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-2xl w-full max-h-[90vh] p-0">
+                    <div className="relative">
+                      <img
+                        src={achievement.certificateImage}
+                        alt={`${achievement.title} Certificate`}
+                        className="w-full h-auto max-h-[70vh] object-contain rounded-t-lg"
+                      />
+                      <div className="p-6 bg-white dark:bg-gray-800">
+                        <div className="flex items-start gap-3 mb-3">
+                          <Trophy className="w-6 h-6 text-yellow-500" />
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                              {achievement.title}
+                            </h3>
+                            <p className="text-blue-600 dark:text-blue-400 font-semibold">
+                              {achievement.institution}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-gray-600 dark:text-gray-400">Achievement:</span>
-                          <p className="font-semibold text-gray-900 dark:text-white">{achievement.rank}</p>
-                        </div>
-                        <div>
-                          <span className="text-gray-600 dark:text-gray-400">Performance:</span>
-                          <p className="font-semibold text-green-600 dark:text-green-400">{achievement.performance}</p>
+                        <div className="grid grid-cols-2 gap-4 text-sm">
+                          <div>
+                            <span className="text-gray-600 dark:text-gray-400">Achievement:</span>
+                            <p className="font-semibold text-gray-900 dark:text-white">{achievement.rank}</p>
+                          </div>
+                          <div>
+                            <span className="text-gray-600 dark:text-gray-400">Performance:</span>
+                            <p className="font-semibold text-green-600 dark:text-green-400">{achievement.performance}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </DialogContent>
-              </Dialog>
+                  </DialogContent>
+                </Dialog>
+              )}
             </div>
           ))}
         </div>
