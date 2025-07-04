@@ -16,7 +16,7 @@ const Navigation: React.FC = () => {
     { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
     { name: 'Achievements', path: '/achievements' },
-    { name: 'Internships', path: '/experience' },
+    { name: 'Experience', path: '/experience' },
     { name: 'Education', path: '/education' },
     { name: 'Certifications', path: '/certifications' },
     { name: 'Resume', path: '/resume' },

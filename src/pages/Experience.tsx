@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { experienceData } from '../data/experience';
 import { Award, Calendar, MapPin, Eye, Loader } from 'lucide-react';
@@ -25,10 +24,10 @@ const ExperienceCard = ({ experience, onViewCertificate }) => (
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-bold text-xl text-gray-900 dark:text-white leading-tight mb-1">
-              {experience.title}
+              {experience.company}
             </h3>
             <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
-              {experience.company}
+              {experience.role}
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-300">
               <div className="flex items-center gap-2">
