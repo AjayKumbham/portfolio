@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { personalInfo } from '../data/personal';
 import { resumeData } from '../data/resume';
@@ -55,11 +54,11 @@ const Resume: React.FC = () => {
           </div>
           
           <div className="flex justify-center">
-            <div className="w-full max-w-4xl bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600 overflow-hidden">
+            <div className="w-full bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600 overflow-hidden">
               <img 
                 src={resumeData.previewImage}
                 alt="Resume Preview"
-                className="w-full h-auto object-contain max-h-screen"
+                className="block w-full h-auto object-cover"
                 onError={(e) => {
                   // Fallback if image doesn't exist
                   const target = e.target as HTMLImageElement;
