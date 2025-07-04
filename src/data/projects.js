@@ -10,7 +10,8 @@ export const projectsData = [
       "Full media generation pipeline: LLM scripts & visuals, Pexels videos, TTS, synced captioning",
       "Secure Supabase backend with user-specific configuration and fallback handling"
     ],
-    tech: ["React", "Tailwind CSS", "Supabase (PostgreSQL, Edge Functions, Auth)", "LLMs", "Python"]
+    tech: ["React", "Tailwind CSS", "Supabase (PostgreSQL, Edge Functions, Auth)", "LLMs", "Python"],
+    image: "/data/images/projects/social-media-agent.png"
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ export const projectsData = [
       "Supabase backend with RLS for secure role-based access",
       "WalletConnect + Wagmi for multi-wallet auth and seamless dApp UX"
     ],
-    tech: ["React", "Tailwind CSS", "Solidity", "Hardhat", "Supabase", "IPFS", "Web3.Storage", "Ethereum"]
+    tech: ["React", "Tailwind CSS", "Solidity", "Hardhat", "Supabase", "IPFS", "Web3.Storage", "Ethereum"],
+    image: "/data/images/projects/grantchain.png"
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ export const projectsData = [
       "Input validation with Jakarta and fault-tolerant async processing",
       "MySQL integration with efficient query handling and role-based endpoints"
     ],
-    tech: ["Spring Boot", "Spring Security", "JWT", "MySQL", "REST APIs"]
+    tech: ["Spring Boot", "Spring Security", "JWT", "MySQL", "REST APIs"],
+    image: "/data/images/projects/member-profile-setup.png"
   }
 ];
