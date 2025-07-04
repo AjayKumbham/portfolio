@@ -2,6 +2,7 @@ export const projectsData = [
   {
     id: 1,
     title: "Social Media Agent",
+    description: "AI-powered automation platform for generating, scheduling, and publishing content across multiple social platforms with real-time analytics and Intelligent decision making.",
     features: [
       "Automates content generation using multiple LLMs (OpenAI, Gemini, Groq)",
       "Smart scheduling and publishing across LinkedIn, X, Instagram, YouTube, Reddit, Hashnode",
@@ -14,6 +15,7 @@ export const projectsData = [
   {
     id: 2,
     title: "Grant Chain",
+    description: "Decentralized fund management platform enabling milestone-based disbursement and DAO-driven governance using Ethereum and IPFS.",
     features: [
       "Decentralized platform for milestone-based fund disbursement via Ethereum smart contracts",
       "DAO-based on-chain voting for transparent grant governance",
@@ -25,7 +27,8 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Member Profile Setup (Evernorth Case Study)",
+    title: "Member Profile Setup (Enterprise Case Study)",
+    description: "Robust enterprise backend system for secure user profile management, built with Spring Boot, JWT, and MySQL.",
     features: [
       "Enterprise-grade backend with 29 Spring Boot REST APIs",
       "Secure authentication using JWT and Spring Security",
