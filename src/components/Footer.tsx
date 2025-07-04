@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className="text-center text-sm text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+            Built with ❤️ and a lot of coffee — Kumbham Ajay Goud © 2025.
           </p>
         </div>
       </div>
