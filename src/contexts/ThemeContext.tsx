@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface ThemeContextType {
@@ -13,8 +12,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDark(saved ? saved === 'dark' : prefersDark);
+    setIsDark(saved ? saved === 'dark' : false);
   }, []);
 
   useEffect(() => {
