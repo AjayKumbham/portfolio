@@ -21,7 +21,7 @@ const CertificateCard: React.FC<{ cert: any }> = ({ cert }) => {
               <img 
                 src={cert.thumbnailImage} 
                 alt={`${cert.certificateTitle} thumbnail`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 onError={() => setThumbError(true)}
               />
             ) : (

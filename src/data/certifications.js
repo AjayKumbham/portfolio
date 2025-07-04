@@ -9,7 +9,8 @@ export const certificationsData = [
     credentialId: null,
     skills: [],
     covered: null,
-    certificateImage: "/data/images/certificates/ibm-skillsbuild.png"
+    certificateImage: "/data/images/certificates/ibm-skillsbuild.png",
+    thumbnailImage: "/data/images/certificates/ibm-skillsbuild.png"
   },
   {
     id: 2,
@@ -20,7 +21,8 @@ export const certificationsData = [
     credentialId: null,
     skills: [],
     covered: null,
-    certificateImage: "/data/images/certificates/freecodecamp.png"
+    certificateImage: "/data/images/certificates/freecodecamp.png",
+    thumbnailImage: "/data/images/certificates/freecodecamp.png"
   },
   {
     id: 3,
@@ -31,7 +33,8 @@ export const certificationsData = [
     credentialId: null,
     skills: [],
     covered: null,
-    certificateImage: "/data/images/certificates/microsoft-linkedin.png"
+    certificateImage: "/data/images/certificates/microsoft-linkedin.png",
+    thumbnailImage: "/data/images/certificates/microsoft-linkedin.png"
   },
   {
     id: 4,
@@ -42,7 +45,8 @@ export const certificationsData = [
     credentialId: null,
     skills: [],
     covered: "Project Setup, Kafka Integration, H2 Integration, REST API Integration, REST API Controller",
-    certificateImage: "/data/images/certificates/jpmorgan-chase.png"
+    certificateImage: "/data/images/certificates/jpmorgan-chase.png",
+    thumbnailImage: "/data/images/certificates/jpmorgan-chase.png"
   },
   {
     id: 5,
@@ -53,7 +57,8 @@ export const certificationsData = [
     credentialId: null,
     skills: [],
     covered: "Exploratory Data Analysis, Risk Profiling, Predicting Delinquency with AI, Business Storytelling, AI-Driven Strategy Implementation",
-    certificateImage: "/data/images/certificates/tata.png"
+    certificateImage: "/data/images/certificates/tata.png",
+    thumbnailImage: "/data/images/certificates/tata.png"
   },
   {
     id: 6,
@@ -64,7 +69,8 @@ export const certificationsData = [
     credentialId: "E4751E66AFDC",
     skills: [],
     covered: null,
-    certificateImage: "/data/images/certificates/hackerrank.png"
+    certificateImage: "/data/images/certificates/hackerrank.png",
+    thumbnailImage: "/data/images/certificates/hackerrank.png"
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ export const certificationsData = [
     credentialId: null,
     skills: [],
     covered: "Verification QR available on certificate",
-    certificateImage: "/data/images/certificates/cisco.png"
+    certificateImage: "/data/images/certificates/cisco.png",
+    thumbnailImage: "/data/images/certificates/cisco.png"
   }
 ];
