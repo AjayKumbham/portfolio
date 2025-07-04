@@ -1,7 +1,7 @@
 
 export const aboutData = {
-  intro: "Hello! I'm Alex, a passionate Computer Science graduate eager to start my journey in tech.",
-  description: "I recently graduated with a degree in Computer Science and have been developing my skills through academic projects, internships, and personal coding challenges. I'm excited to apply my knowledge and continue learning in a professional environment.",
+  intro: "Hello! I'm Kumbham Ajay Goud, a Computer Science undergraduate passionate about building intelligent, data-driven applications using full-stack development, AI automation & engineering, and data analysis.",
+  description: "I am currently pursuing a degree in Computer Science with a strong focus on full-stack web development, AI automation and engineering, and data analysis. I have built several real-world projects that integrate these domains, such as a social media automation platform and an enterprise-grade backend system. Ranked twice in the top 1% of NPTEL and maintaining a CGPA of 9.71, I combine academic excellence with practical, solution-driven development. I am highly adaptable, quick to learn new technologies, and continuously explore emerging tools and frameworks to build impactful, scalable systems.",
   personality: [
     "Quick learner with strong problem-solving abilities",
     "Team player who enjoys collaborative development", 

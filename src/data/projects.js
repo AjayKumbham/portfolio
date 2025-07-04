@@ -1,57 +1,38 @@
-
 export const projectsData = [
   {
     id: 1,
-    title: "Task Management Web App",
-    description: "A full-stack task management application built with React and Node.js, featuring user authentication and real-time updates",
+    title: "Social Media Agent",
     features: [
-      "User authentication and authorization",
-      "Real-time task updates with Socket.io",
-      "Drag and drop task management",
-      "Team collaboration features",
-      "Email notifications"
+      "Automates content generation using multiple LLMs (OpenAI, Gemini, Groq)",
+      "Smart scheduling and publishing across LinkedIn, X, Instagram, YouTube, Reddit, Hashnode",
+      "Real-time analytics and engagement tracking",
+      "Full media generation pipeline: LLM scripts & visuals, Pexels videos, TTS, synced captioning",
+      "Secure Supabase backend with user-specific configuration and fallback handling"
     ],
-    image: "/data/images/projects/task-manager.jpg", // Place project images in public/data/images/projects/
-    tech: ["React", "Node.js", "MongoDB", "Socket.io"],
-    github: "https://github.com/alexjohnson/task-manager",
-    live: "https://taskmanager-demo.com",
-    featured: true,
-    hasLiveDemo: true
+    tech: ["React", "Tailwind CSS", "Supabase (PostgreSQL, Edge Functions, Auth)", "LLMs", "Python"]
   },
   {
     id: 2,
-    title: "University Portal Clone",
-    description: "Academic project recreating university student portal with course management and grade tracking functionality",
+    title: "Grant Chain",
     features: [
-      "Student dashboard and profile management",
-      "Course enrollment and scheduling",
-      "Grade tracking and GPA calculation",
-      "Assignment submission system",
-      "Faculty communication portal"
+      "Decentralized platform for milestone-based fund disbursement via Ethereum smart contracts",
+      "DAO-based on-chain voting for transparent grant governance",
+      "IPFS/Web3.Storage for storing proposal and milestone metadata",
+      "Supabase backend with RLS for secure role-based access",
+      "WalletConnect + Wagmi for multi-wallet auth and seamless dApp UX"
     ],
-    image: "/data/images/projects/university-portal.jpg",
-    tech: ["HTML", "CSS", "JavaScript", "PHP"],
-    github: "https://github.com/alexjohnson/university-portal",
-    live: "https://university-demo.com",
-    featured: true,
-    hasLiveDemo: true
+    tech: ["React", "Tailwind CSS", "Solidity", "Hardhat", "Supabase", "IPFS", "Web3.Storage", "Ethereum"]
   },
   {
     id: 3,
-    title: "Weather App",
-    description: "Simple weather application using OpenWeather API with location-based forecasts and responsive design",
+    title: "Member Profile Setup (Evernorth Case Study)",
     features: [
-      "Current weather conditions",
-      "5-day weather forecast",
-      "Location-based weather detection",
-      "Search by city functionality",
-      "Responsive mobile design"
+      "Enterprise-grade backend with 29 Spring Boot REST APIs",
+      "Secure authentication using JWT and Spring Security",
+      "Modular profile system with full CRUD for personal, medical, and payment data",
+      "Input validation with Jakarta and fault-tolerant async processing",
+      "MySQL integration with efficient query handling and role-based endpoints"
     ],
-    image: "/data/images/projects/weather-app.jpg",
-    tech: ["JavaScript", "OpenWeather API", "CSS"],
-    github: "https://github.com/alexjohnson/weather-app",
-    live: "https://weather-demo.com",
-    featured: false,
-    hasLiveDemo: false
+    tech: ["Spring Boot", "Spring Security", "JWT", "MySQL", "REST APIs"]
   }
 ];

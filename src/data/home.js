@@ -1,7 +1,7 @@
 export const homeData = {
   name: "Kumbham Ajay Goud",
   title: "Computer Science Undergraduate", 
-  tagline: "Passionate about creating innovative solutions and building amazing user experiences",
+  tagline: "Creating impactful solutions at the intersection of full-stack development, AI automation & engineering, and data analysis.",
   profileImage: "/data/images/profile.jpg", // Local path to your profile image
   stats: {
     nptelAchievements: "2x",
