@@ -6,13 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const Skills: React.FC = () => {
-  const SkillItem: React.FC<{ skill: { name: string; level: number } }> = ({ skill }) => (
+  const SkillItem: React.FC<{ skill: { name: string } }> = ({ skill }) => (
     <Badge variant="secondary" className="text-sm font-medium px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
       {skill.name}
     </Badge>
   );
 
-  const SkillCategory: React.FC<{ title: string; skills: { name: string; level: number }[]; icon: React.ReactNode }> = ({ title, skills, icon }) => (
+  const SkillCategory: React.FC<{ title: string; skills: { name: string }[]; icon: React.ReactNode }> = ({ title, skills, icon }) => (
     <Card className="h-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
       <CardHeader className="pb-4">
         <CardTitle className="flex items-center space-x-3 text-lg font-semibold text-gray-900 dark:text-white">
@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
     </Card>
   );
 
-  const SoftSkillItem: React.FC<{ skill: { name: string; level: number } }> = ({ skill }) => (
+  const SoftSkillItem: React.FC<{ skill: { name: string } }> = ({ skill }) => (
     <div className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
       <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
       <span className="text-gray-800 dark:text-gray-200 font-medium">{skill.name}</span>
@@ -38,6 +38,7 @@ const Skills: React.FC = () => {
   );
 
   return (
+    // ... keep existing code (outer div structure and header section)
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
