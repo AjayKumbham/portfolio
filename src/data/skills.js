@@ -1,13 +1,14 @@
 console.log("[skills.js] Loaded and softSkillsData export is available!");
 
-// Data for soft skills (simple list without quantifying)
+// Data for soft skills (simple list)
 const softSkillsData = [
-  { name: "Communication" },
   { name: "Problem Solving" },
-  { name: "Team Collaboration" },
-  { name: "Technical Writing" },
-  { name: "Leadership" },
-  { name: "Time Management" }
+  { name: "Attention to Detail" },
+  { name: "Adaptability" },
+  { name: "Self-Learning" },
+  { name: "Communication" },
+  { name: "Teamwork" },
+  { name: "Team Leadership" }
 ];
 
 // Data for technical skills (as requested)
