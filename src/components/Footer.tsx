@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { personalInfo } from '../data/personal';
@@ -22,7 +21,7 @@ const Footer: React.FC = () => {
               {personalInfo.name}
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {personalInfo.tagline}
+              Creating impactful solutions at the intersection of full-stack development, AI automation & engineering, and data analysis.
             </p>
           </div>
 
