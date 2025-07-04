@@ -1,4 +1,3 @@
-
 console.log("[skills.js] Loaded and softSkillsData export is available!");
 
 // Data for soft skills (simple list without quantifying)
@@ -11,49 +10,48 @@ const softSkillsData = [
   { name: "Time Management" }
 ];
 
-// Data for technical skills (simple list without quantifying)
+// Data for technical skills (as requested)
 const skillsData = {
-  "ai-ml": [
-    { name: "Machine Learning" },
-    { name: "Python (ML)" },
-    { name: "TensorFlow" },
-    { name: "Data Analysis" },
-    { name: "Neural Networks" }
-  ],
-  frontend: [
-    { name: "React" },
-    { name: "JavaScript" },
-    { name: "HTML/CSS" },
-    { name: "Tailwind CSS" },
-    { name: "TypeScript" }
-  ],
-  backend: [
-    { name: "Node.js" },
+  programmingLanguages: [
+    { name: "Java (Primary)" },
     { name: "Python" },
+    { name: "JavaScript" }
+  ],
+  fullStackDevelopment: [
+    { name: "HTML" },
+    { name: "CSS" },
+    { name: "React.js" },
+    { name: "Node.js" },
+    { name: "Spring Boot" }
+  ],
+  aiMl: [
+    { name: "TensorFlow" },
+    { name: "Scikit-learn" },
+    { name: "LangChain" },
+    { name: "NumPy & Pandas" },
+    { name: "Matplotlib & Seaborn" }
+  ],
+  databases: [
+    { name: "SQL (Query Language)" },
     { name: "MySQL" },
     { name: "MongoDB" },
-    { name: "REST APIs" }
+    { name: "Supabase" }
   ],
-  automation: [
-    { name: "Selenium" },
-    { name: "Jenkins" },
-    { name: "GitHub Actions" },
-    { name: "Test Automation" },
-    { name: "CI/CD" }
-  ],
-  tools: [
-    { name: "Git" },
-    { name: "VS Code" },
+  devToolsPlatforms: [
+    { name: "Git & GitHub" },
     { name: "Docker" },
-    { name: "Linux" },
+    { name: "VS Code" },
     { name: "Postman" }
   ],
-  languages: [
-    { name: "JavaScript" },
-    { name: "Python" },
-    { name: "TypeScript" },
-    { name: "Java" },
-    { name: "SQL" }
+  relevantCoursework: [
+    { name: "Data Structures & Algorithms" },
+    { name: "Operating Systems" },
+    { name: "DBMS" },
+    { name: "Computer Networks" },
+    { name: "Object-Oriented Programming (Java)" },
+    { name: "Software Engineering" },
+    { name: "Artificial Intelligence" },
+    { name: "Machine Learning" }
   ]
 };
 
