@@ -7,7 +7,7 @@ export const achievementsData = [
     rank: "Elite + Topper",
     performance: "Earned Elite + Topper distinction among 14,000+ certified candidates nationwide.",
     icon: "🏆",
-    certificateImage: null
+    certificateImage: "/data/images/achievements/achievement-nptel-java.png"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const achievementsData = [
     rank: "Gold + Topper",
     performance: "Secured Gold + Topper distinction with the highest honor of Gold Certificate.",
     icon: "🥇",
-    certificateImage: null
+    certificateImage: "/data/images/achievements/achievement-nptel-cloud.png"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const achievementsData = [
     rank: "AIR 6600",
     performance: "Ranked among 1.7 lakh+ candidates in one of India's most competitive engineering exams.",
     icon: "🎓",
-    certificateImage: null
+    certificateImage: "/data/images/achievements/achievement-gate.png"
   },
   {
     id: 4,
@@ -37,6 +37,6 @@ export const achievementsData = [
     rank: "2nd Position in CSE Dept.",
     performance: "Secured 2nd position in the entire CSE department, recognized for outstanding academic performance.",
     icon: "🏅",
-    certificateImage: null
+    certificateImage: "/data/images/achievements/achievement-csetop2.png"
   }
 ];
