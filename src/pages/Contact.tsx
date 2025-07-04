@@ -68,52 +68,31 @@ const Contact: React.FC = () => {
     });
   };
 
-  const ContactCard: React.FC<{ icon: React.ReactNode; title: string; info: string; link?: string; onClick?: () => void }> = ({ 
+  const ContactCard: React.FC<{ icon: React.ReactNode; title: string; info: string; href: string }> = ({ 
     icon, 
     title, 
     info, 
-    link, 
-    onClick 
+    href
   }) => (
-    <div className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:transform hover:scale-105">
-      <div className="flex items-center space-x-4 mb-3">
-        <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300">
-          {icon}
-        </div>
-        <div>
-          <h3 className="font-semibold text-gray-900 dark:text-white">{title}</h3>
-        </div>
+  <a
+    href={href}
+    target={href.startsWith('http') ? '_blank' : undefined}
+    rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+    className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:transform hover:scale-105 flex flex-col cursor-pointer no-underline"
+  >
+    <div className="flex items-center space-x-4 mb-3">
+      <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300">
+        {icon}
       </div>
-      {link ? (
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 cursor-pointer"
-        >
-          {info}
-        </a>
-      ) : onClick ? (
-        <button
-          onClick={onClick}
-          className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 cursor-pointer text-left"
-        >
-          {info}
-        </button>
-      ) : (
-        <p className="text-gray-600 dark:text-gray-300">{info}</p>
-      )}
+      <div>
+        <h3 className="font-semibold text-gray-900 dark:text-white">{title}</h3>
+      </div>
     </div>
-  );
-
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${personalInfo.email}`;
-  };
-
-  const handleLocationClick = () => {
-    const encodedLocation = encodeURIComponent(personalInfo.location);
-    window.open(`https://www.google.com/maps/search/?api=1&query=${encodedLocation}`, '_blank');
-  };
+    <div className="text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+      {info}
+    </div>
+  </a>
+);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20">
@@ -140,28 +119,28 @@ const Contact: React.FC = () => {
                 icon={<Mail className="w-6 h-6" />}
                 title="Email"
                 info={personalInfo.email}
-                onClick={handleEmailClick}
+                href={`mailto:${personalInfo.email}`}
               />
               
               <ContactCard
                 icon={<MapPin className="w-6 h-6" />}
                 title="Location"
                 info={personalInfo.location}
-                onClick={handleLocationClick}
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(personalInfo.location)}`}
               />
               
               <ContactCard
                 icon={<Linkedin className="w-6 h-6" />}
                 title="LinkedIn"
                 info="Connect with me"
-                link={personalInfo.social.linkedin}
+                href={personalInfo.social.linkedin}
               />
               
               <ContactCard
                 icon={<Github className="w-6 h-6" />}
                 title="GitHub"
                 info="Check out my code"
-                link={personalInfo.social.github}
+                href={personalInfo.social.github}
               />
             </div>
           </div>

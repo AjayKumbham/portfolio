@@ -1,6 +1,6 @@
 export const homeData = {
   name: "Kumbham Ajay Goud",
-  title: "Computer Science Undergraduate", 
+  title: "Computer Science Student", 
   tagline: "Creating impactful solutions at the intersection of full-stack development, AI automation & engineering, and data analysis.",
   profileImage: "/data/images/profile-formal.jpg", // Local path to your profile image
   stats: {
