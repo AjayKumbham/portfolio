@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Code, Database, Globe, Cog, Wrench, Brain, BookOpen, Settings } from 'lucide-react';
+import { Code, Database, Globe, Cog, Wrench, Brain, BookOpen, Settings, Layers } from 'lucide-react';
 import { skillsData, softSkillsData } from '../data/skills';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -38,7 +37,6 @@ const Skills: React.FC = () => {
   );
 
   return (
-    // ... keep existing code (outer div structure and header section)
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -61,14 +59,13 @@ const Skills: React.FC = () => {
               Technical Skills
             </h2>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <SkillCategory title="AI & Machine Learning" skills={skillsData["ai-ml"]} icon={<Brain className="w-5 h-5" />} />
-            <SkillCategory title="Frontend Development" skills={skillsData.frontend} icon={<Globe className="w-5 h-5" />} />
-            <SkillCategory title="Backend Development" skills={skillsData.backend} icon={<Database className="w-5 h-5" />} />
-            <SkillCategory title="Automation" skills={skillsData.automation} icon={<Settings className="w-5 h-5" />} />
-            <SkillCategory title="Tools & Platforms" skills={skillsData.tools} icon={<Cog className="w-5 h-5" />} />
-            <SkillCategory title="Programming Languages" skills={skillsData.languages} icon={<Code className="w-5 h-5" />} />
+            <SkillCategory title="Programming Languages" skills={skillsData.programmingLanguages} icon={<Code className="w-5 h-5" />} />
+            <SkillCategory title="Full Stack Development" skills={skillsData.fullStackDevelopment} icon={<Layers className="w-5 h-5" />} />
+            <SkillCategory title="AI / Machine Learning" skills={skillsData.aiMl} icon={<Brain className="w-5 h-5" />} />
+            <SkillCategory title="Databases" skills={skillsData.databases} icon={<Database className="w-5 h-5" />} />
+            <SkillCategory title="Development Tools & Platforms" skills={skillsData.devToolsPlatforms} icon={<Wrench className="w-5 h-5" />} />
+            <SkillCategory title="Relevant Coursework" skills={skillsData.relevantCoursework} icon={<BookOpen className="w-5 h-5" />} />
           </div>
         </div>
 
@@ -82,7 +79,6 @@ const Skills: React.FC = () => {
               Soft Skills
             </h2>
           </div>
-          
           <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
             <CardContent className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
