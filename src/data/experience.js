@@ -1,54 +1,34 @@
-
 export const experienceData = [
   {
     id: 1,
-    title: "Software Development Intern",
-    company: "TechStart Solutions",
-    duration: "Summer 2023",
-    location: "San Francisco, CA",
-    type: "internship",
-    hasCertificate: true,
-    certificateUrl: "/data/images/certificates/techstart-internship.jpg", // Place certificate images in public/data/images/certificates/
-    technologies: ["React", "JavaScript", "CSS", "Git", "Agile"],
+    title: "Evernorth Health Services – Case Study",
+    company: "Evernorth Health Services (Vardhaman Innovation Lab)",
+    role: "Backend Developer",
+    duration: "Nov 2024 – Feb 2025",
+    location: "Vardhaman Innovation Lab",
+    type: "case-study",
+    hasCertificate: false,
+    certificateUrl: null,
+    technologies: ["Spring Boot", "Spring Security", "JWT", "MySQL", "Kafka", "Docker", "Jenkins"],
     responsibilities: [
-      "Developed responsive web components using React and CSS",
-      "Collaborated with development team on feature implementation",
-      "Participated in code reviews and agile development processes",
-      "Learned industry best practices for version control and testing"
+      "Streamlined secure member onboarding and profile management, including contact, payment, and health data.",
+      "Built a medication ordering system with search, price comparison, and delivery tracking, powered by real-time Kafka event streams and Docker-based CI/CD deployment using Jenkins."
     ]
   },
   {
     id: 2,
-    title: "Web Development Freelancer",
-    company: "Self-Employed",
-    duration: "2022 - 2023",
-    location: "Remote",
-    type: "part-time",
+    title: "AI/ML Intern",
+    company: "National Institute of Electronics and Information Technology (NIELIT)",
+    role: "AI/ML Intern",
+    duration: "Aug 2024 – Oct 2024",
+    location: "Virtual",
+    type: "internship",
     hasCertificate: false,
     certificateUrl: null,
-    technologies: ["HTML", "CSS", "JavaScript", "SEO", "WordPress"],
+    technologies: ["Python", "NumPy", "pandas", "scikit-learn", "matplotlib"],
     responsibilities: [
-      "Built custom websites for local businesses using HTML, CSS, and JavaScript",
-      "Managed client relationships and project timelines",
-      "Implemented responsive designs and basic SEO optimization",
-      "Gained experience with client communication and project management"
-    ]
-  },
-  {
-    id: 3,
-    title: "Computer Lab Assistant",
-    company: "University of California, Berkeley",
-    duration: "2021 - 2022",
-    location: "Berkeley, CA",
-    type: "part-time",
-    hasCertificate: true,
-    certificateUrl: "/data/images/certificates/lab-assistant.jpg",
-    technologies: ["Python", "Java", "C++", "Linux", "Debugging"],
-    responsibilities: [
-      "Assisted students with programming assignments and technical issues",
-      "Maintained computer lab equipment and software installations",
-      "Tutored peers in programming fundamentals and debugging",
-      "Developed communication and problem-solving skills"
+      "Completed an 8-week internship covering core AI/ML concepts, algorithms through hands-on projects built using Python libraries (NumPy, pandas, scikit-learn, and matplotlib)",
+      "Built ML models for prediction and analysis, applying training and evaluation techniques to real-world datasets."
     ]
   }
 ];
