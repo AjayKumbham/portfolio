@@ -3,20 +3,13 @@ import React from 'react';
 import { Code, Database, Globe, Cog, Wrench, Brain, BookOpen, Settings } from 'lucide-react';
 import { skillsData, softSkillsData } from '../data/skills';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 
 const Skills: React.FC = () => {
-  const SkillBar: React.FC<{ skill: { name: string; level: number } }> = ({ skill }) => (
-    <div className="space-y-3">
-      <div className="flex justify-between items-center">
-        <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{skill.name}</span>
-        <Badge variant="secondary" className="text-xs font-semibold px-2 py-1">
-          {skill.level}%
-        </Badge>
-      </div>
-      <Progress value={skill.level} className="h-1 bg-gray-100 dark:bg-gray-800" />
-    </div>
+  const SkillItem: React.FC<{ skill: { name: string; level: number } }> = ({ skill }) => (
+    <Badge variant="secondary" className="text-sm font-medium px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+      {skill.name}
+    </Badge>
   );
 
   const SkillCategory: React.FC<{ title: string; skills: { name: string; level: number }[]; icon: React.ReactNode }> = ({ title, skills, icon }) => (
@@ -28,31 +21,21 @@ const Skills: React.FC = () => {
         </CardTitle>
       </CardHeader>
       <CardContent className="pt-0 flex-1">
-        <div className="space-y-5">
+        <div className="flex flex-wrap gap-2">
           {skills.map((skill, index) => (
-            <SkillBar key={index} skill={skill} />
+            <SkillItem key={index} skill={skill} />
           ))}
         </div>
       </CardContent>
     </Card>
   );
 
-  const StarRating: React.FC<{ level: number }> = ({ level }) => {
-    return (
-      <div className="flex space-x-1">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <span
-            key={star}
-            className={`text-2xl ${
-              star <= level ? 'text-amber-400' : 'text-gray-300 dark:text-gray-600'
-            }`}
-          >
-            ★
-          </span>
-        ))}
-      </div>
-    );
-  };
+  const SoftSkillItem: React.FC<{ skill: { name: string; level: number } }> = ({ skill }) => (
+    <div className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+      <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
+      <span className="text-gray-800 dark:text-gray-200 font-medium">{skill.name}</span>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16">
@@ -101,31 +84,10 @@ const Skills: React.FC = () => {
           
           <Card className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
             <CardContent className="p-6">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-gray-200 dark:border-gray-700">
-                      <th className="text-left py-3 px-4 font-semibold text-gray-900 dark:text-white">
-                        Skill
-                      </th>
-                      <th className="text-left py-3 px-4 font-semibold text-gray-900 dark:text-white">
-                        Level
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {softSkillsData.map((skill, index) => (
-                      <tr key={index} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-                        <td className="py-4 px-4 font-medium text-gray-800 dark:text-gray-200">
-                          {skill.name}
-                        </td>
-                        <td className="py-4 px-4">
-                          <StarRating level={skill.level} />
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {softSkillsData.map((skill, index) => (
+                  <SoftSkillItem key={index} skill={skill} />
+                ))}
               </div>
             </CardContent>
           </Card>
