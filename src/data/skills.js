@@ -46,8 +46,8 @@ const skillsData = {
   ],
   relevantCoursework: [
     { name: "Data Structures & Algorithms" },
-    { name: "Operating Systems" },
     { name: "DBMS" },
+    { name: "Operating Systems" },
     { name: "Computer Networks" },
     { name: "Object-Oriented Programming (Java)" },
     { name: "Software Engineering" },
