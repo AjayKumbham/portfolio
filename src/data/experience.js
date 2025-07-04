@@ -10,8 +10,8 @@ export const experienceData = [
     certificateUrl: null,
     technologies: ["Spring Boot", "Spring Security", "JWT", "MySQL", "Kafka", "Docker", "Jenkins"],
     responsibilities: [
-      "Streamlined secure member onboarding and profile management, including contact, payment, and health data.",
-      "Built a medication ordering system with search, price comparison, and delivery tracking, powered by real-time Kafka event streams and Docker-based CI/CD deployment using Jenkins."
+      "Contributed to secure member onboarding and profile management modules, including handling contact, payment, and health data with proper validation and data flow",
+      "Assisted in building core components of the medication ordering system, including search functionality, delivery tracking integration, and real-time event handling using Kafka, with CI/CD setup via Docker and Jenkins"
     ]
   },
   {
@@ -26,7 +26,7 @@ export const experienceData = [
     technologies: ["Python", "NumPy", "pandas", "scikit-learn", "matplotlib"],
     responsibilities: [
       "Completed an 8-week internship covering core AI/ML concepts, algorithms through hands-on projects built using Python libraries (NumPy, pandas, scikit-learn, and matplotlib)",
-      "Built ML models for prediction and analysis, applying training and evaluation techniques to real-world datasets."
+      "Built ML models for prediction and analysis tasks, applying training, evaluation, and optimization techniques to real-world datasets."
     ]
   }
 ];

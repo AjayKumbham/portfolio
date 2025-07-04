@@ -77,7 +77,7 @@ const ExperienceCard = ({ experience, onViewCertificate }) => (
 
         {/* Responsibilities */}
         <div>
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Responsibilities</h4>
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Contributions</h4>
           <ul className="space-y-2">
             {experience.responsibilities.map((resp, idx) => (
               <li key={idx} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
