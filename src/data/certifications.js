@@ -8,7 +8,8 @@ export const certificationsData = [
     verificationLink: "https://www.credly.com/badges/39bb6af3-5b3b-4ef7-9bd8-5b49b6680f9a",
     credentialId: null,
     skills: [],
-    covered: null
+    covered: null,
+    certificateImage: "/data/images/certificates/ibm-skillsbuild.png"
   },
   {
     id: 2,
@@ -18,7 +19,8 @@ export const certificationsData = [
     verificationLink: "https://freecodecamp.org/certification/fcc-73f03116-78eb-460a-80cf-642431d165f9/back-end-development-and-apis",
     credentialId: null,
     skills: [],
-    covered: null
+    covered: null,
+    certificateImage: "/data/images/certificates/freecodecamp.png"
   },
   {
     id: 3,
@@ -28,7 +30,8 @@ export const certificationsData = [
     verificationLink: "https://www.linkedin.com/learning/certificates/b31e3ed02330d14575a98cf2593cf049e0d2a848e9058df97283e8432b3eca9f",
     credentialId: null,
     skills: [],
-    covered: null
+    covered: null,
+    certificateImage: "/data/images/certificates/microsoft-linkedin.png"
   },
   {
     id: 4,
@@ -38,7 +41,8 @@ export const certificationsData = [
     verificationLink: null,
     credentialId: null,
     skills: [],
-    covered: "Project Setup, Kafka Integration, H2 Integration, REST API Integration, REST API Controller"
+    covered: "Project Setup, Kafka Integration, H2 Integration, REST API Integration, REST API Controller",
+    certificateImage: "/data/images/certificates/jpmorgan-chase.png"
   },
   {
     id: 5,
@@ -48,7 +52,8 @@ export const certificationsData = [
     verificationLink: null,
     credentialId: null,
     skills: [],
-    covered: "Exploratory Data Analysis, Risk Profiling, Predicting Delinquency with AI, Business Storytelling, AI-Driven Strategy Implementation"
+    covered: "Exploratory Data Analysis, Risk Profiling, Predicting Delinquency with AI, Business Storytelling, AI-Driven Strategy Implementation",
+    certificateImage: "/data/images/certificates/tata.png"
   },
   {
     id: 6,
@@ -58,7 +63,8 @@ export const certificationsData = [
     verificationLink: null,
     credentialId: "E4751E66AFDC",
     skills: [],
-    covered: null
+    covered: null,
+    certificateImage: "/data/images/certificates/hackerrank.png"
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ export const certificationsData = [
     verificationLink: "https://www.credly.com/badges/f46fd8fc-31b2-48b5-bf90-d4189ed25a1c/public_url",
     credentialId: null,
     skills: [],
-    covered: "Verification QR available on certificate"
+    covered: "Verification QR available on certificate",
+    certificateImage: "/data/images/certificates/cisco.png"
   }
 ];
