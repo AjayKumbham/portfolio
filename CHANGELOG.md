@@ -221,7 +221,7 @@ No breaking changes in current version.
 
 For support and questions:
 - Email: ajaygoud.kumbham@gmail.com
-- GitHub Issues: [Create an issue](https://github.com/yourusername/portfolio/issues)
+- GitHub Issues: [Create an issue](https://github.com/AjayKumbham/portfolio/issues)
 - Documentation: [README.md](README.md)
 
 ---
