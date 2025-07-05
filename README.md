@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![Live Demo](https://img.shields.io/badge/Live_Demo-View_Online-green?style=for-the-badge)](https://ajaykumbham-portfolio.vercel.app/)
 
-🌐 **Live Demo**: [https://ajaykumbham-portfolio.vercel.app/](https://ajaykumbham-portfolio.vercel.app/)
+🌐 **Live Site**: [https://ajaykumbham-portfolio.vercel.app/](https://ajaykumbham-portfolio.vercel.app/)
 
 A modern, responsive portfolio website showcasing my skills, projects, and professional journey. Built with React, TypeScript, and Tailwind CSS for optimal performance and user experience.
 
