@@ -33,7 +33,7 @@ We welcome various types of contributions:
 1. **Fork the Repository**
    ```bash
    # Fork on GitHub, then clone your fork
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/AjayKumbham/portfolio.git
    cd portfolio
    ```
 
@@ -280,8 +280,8 @@ npm run build
 
 ### Resources
 - [README.md](README.md) - Project overview and setup
-- [Issues](https://github.com/yourusername/portfolio/issues) - Browse existing issues
-- [Discussions](https://github.com/yourusername/portfolio/discussions) - Community discussions
+- [Issues](https://github.com/AjayKumbham/portfolio/issues) - Browse existing issues
+- [Discussions](https://github.com/AjayKumbham/portfolio/discussions) - Community discussions
 
 ### Contact
 - Create an issue for bugs or feature requests

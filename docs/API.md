@@ -454,7 +454,7 @@ For API-related issues:
 
 - **FormSubmit**: [formsubmit.co/support](https://formsubmit.co/support)
 - **Google Analytics**: [support.google.com/analytics](https://support.google.com/analytics)
-- **Project Issues**: [GitHub Issues](https://github.com/yourusername/portfolio/issues)
+- **Project Issues**: [GitHub Issues](https://github.com/AjayKumbham/portfolio/issues)
 
 ---
 

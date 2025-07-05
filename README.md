@@ -70,7 +70,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and profe
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/AjayKumbham/portfolio.git
    cd portfolio
    ```
 
@@ -173,8 +173,8 @@ export const personalInfo = {
   email: "your.email@example.com",
   location: "Your Location",
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername"
+    github: "https://github.com/AjayKumbham",
+    linkedin: "https://linkedin.com/in/kumbham-ajay-goud"
   }
 };
 ```
