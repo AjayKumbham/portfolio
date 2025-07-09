@@ -11,7 +11,8 @@ export const projectsData = [
       "Secure Supabase backend with user-specific configuration and fallback handling"
     ],
     tech: ["React", "Tailwind CSS", "Supabase (PostgreSQL, Edge Functions, Auth)", "LLMs", "Python"],
-    image: "/data/images/projects/social-media-agent.png"
+    image: "/data/images/projects/social-media-agent.png",
+    github: "https://github.com/AjayKumbham/social-media-agent"
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ export const projectsData = [
       "WalletConnect + Wagmi for multi-wallet auth and seamless dApp UX"
     ],
     tech: ["React", "Tailwind CSS", "Solidity", "Hardhat", "Supabase", "IPFS", "Web3.Storage", "Ethereum"],
-    image: "/data/images/projects/grantchain.png"
+    image: "/data/images/projects/grantchain.png",
+    github: "https://github.com/AjayKumbham"
   },
   {
     id: 3,
@@ -39,6 +41,7 @@ export const projectsData = [
       "MySQL integration with efficient query handling and role-based endpoints"
     ],
     tech: ["Spring Boot", "Spring Security", "JWT", "MySQL", "REST APIs"],
-    image: "/data/images/projects/member-profile-setup.png"
+    image: "/data/images/projects/member-profile-setup.png",
+    github: "https://github.com/AjayKumbham/evernorth-backend-api"
   }
 ];
