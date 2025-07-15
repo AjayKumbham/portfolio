@@ -38,6 +38,31 @@ A modern, responsive portfolio website showcasing my skills, projects, and profe
 - **Image Optimization**: Optimized project images and assets
 - **Accessibility**: WCAG compliant with proper ARIA labels
 
+## 🏅 Performance & Quality
+
+### GTmetrix Report
+
+![GTmetrix Performance Report](public/data/images/gtmetrix-report.png)
+
+- **Performance:** 100%
+- **Structure:** 100%
+- **Largest Contentful Paint:** 327ms
+- **Total Blocking Time:** 0ms
+- **Cumulative Layout Shift:** 0
+
+_Analyzed with GTmetrix on July 14, 2025. [View site](https://ajaykumbham-portfolio.vercel.app/)_
+
+### Lighthouse Audit
+
+![Lighthouse Audit](public/data/images/lighthouse-report.png)
+
+- **Performance:** 100
+- **Accessibility:** 94
+- **Best Practices:** 100
+- **SEO:** 100
+
+_Analyzed with Google Lighthouse, July 2025. [View site](https://ajaykumbham-portfolio.vercel.app/)_
+
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -164,38 +189,7 @@ portfolio/
 
 ## 🎨 Customization
 
-### Personal Information
-Update your personal details in `src/data/personal.js`:
-```javascript
-export const personalInfo = {
-  name: "Your Name",
-  title: "Your Title",
-  email: "your.email@example.com",
-  location: "Your Location",
-  social: {
-    github: "https://github.com/AjayKumbham",
-    linkedin: "https://linkedin.com/in/kumbham-ajay-goud"
-  }
-};
-```
-
-### Projects
-Add or modify projects in `src/data/projects.js`:
-```javascript
-{
-  id: 1,
-  title: "Project Title",
-  description: "Project description",
-  features: ["Feature 1", "Feature 2"],
-  tech: ["React", "TypeScript"],
-  image: "/data/images/projects/project-image.png"
-}
-```
-
-### Styling
-- **Colors**: Modify Tailwind config in `tailwind.config.ts`
-- **Components**: Update component styles in respective files
-- **Theme**: Customize dark/light theme colors
+You can easily customize the portfolio by editing the data files in `src/data/` (such as `personal.js`, `projects.js`, etc.) to use your own information, projects, and content. For images, PDFs, and other assets, simply replace the files in the `public/data/` directory (e.g., `images/`, `documents/`) with your own.
 
 ## 🔧 Available Scripts
 

@@ -80,16 +80,16 @@ const Contact: React.FC = () => {
     rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
     className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:transform hover:scale-105 flex flex-col cursor-pointer no-underline"
   >
-    <div className="flex items-center space-x-4 mb-3">
-      <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300">
-        {icon}
+      <div className="flex items-center space-x-4 mb-3">
+        <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300">
+          {icon}
+        </div>
+        <div>
+          <h3 className="font-semibold text-gray-900 dark:text-white">{title}</h3>
+        </div>
       </div>
-      <div>
-        <h3 className="font-semibold text-gray-900 dark:text-white">{title}</h3>
-      </div>
-    </div>
     <div className="text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-      {info}
+          {info}
     </div>
   </a>
 );
