@@ -5,7 +5,6 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-4.4.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Online-green?style=for-the-badge)](https://ajaykumbham-portfolio.vercel.app/)
 
 🌐 **Live Site**: [https://ajaykumbham-portfolio.vercel.app/](https://ajaykumbham-portfolio.vercel.app/)
 
