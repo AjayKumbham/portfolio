@@ -41,9 +41,15 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <Link 
             to="/" 
-            className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+            className="flex items-center space-x-3 text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
           >
-            {personalInfo.name}
+            <img 
+              src="/personal-logo.jpg" 
+              alt="Kumbham Ajay Logo" 
+              className="w-[1.875rem] h-[1.875rem] rounded-full object-cover border-2 border-blue-600 shadow-sm transform translate-y-[0.5px]"
+            />
+            
+            <span>{personalInfo.name}</span>
           </Link>
 
           {/* Desktop Navigation */}

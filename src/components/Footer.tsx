@@ -17,9 +17,16 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {personalInfo.name}
-            </h3>
+            <div className="flex items-center space-x-3">
+              <img 
+              src="/personal-logo.jpg" 
+              alt="Kumbham Ajay Logo" 
+              className="w-8 h-8 rounded-full object-cover border-2 border-blue-600 shadow-sm transform translate-y-[0.5px]"
+            />
+              <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                {personalInfo.name}
+              </h3>
+            </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Creating impactful solutions at the intersection of full-stack development, AI automation & engineering, and data analysis.
             </p>
