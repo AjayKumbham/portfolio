@@ -83,5 +83,41 @@ export const certificationsData = [
     covered: "Verification QR available on certificate",
     certificateImage: "/data/images/certificates/cisco.png",
     thumbnailImage: "/data/images/certificates/cisco.png"
+  },
+  {
+    id: 8,
+    certificateTitle: "AI Prompt Engineering Masterclass",
+    issuingOrganization: "Reliance Digital Store",
+    dateIssued: "Sep 2025",
+    verificationLink: null,
+    credentialId: null,
+    skills: [],
+    covered: "AI Prompt Engineering techniques, best practices for AI interaction, and future of AI technology",
+    certificateImage: "/data/images/certificates/aischool-ai.png",
+    thumbnailImage: "/data/images/certificates/aischool-ai.png"
+  },
+  {
+    id: 9,
+    certificateTitle: "Introduction to Model Context Protocol",
+    issuingOrganization: "Anthropic",
+    dateIssued: "Sep 2025",
+    verificationLink: "https://verify.skilljar.com/c/4ghrjjmimd95",
+    credentialId: "4ghrjjmimd95",
+    skills: [],
+    covered: "Understanding Model Context Protocol fundamentals and implementation",
+    certificateImage: "/data/images/certificates/anthropic-mcp.png",
+    thumbnailImage: "/data/images/certificates/anthropic-mcp.png"
+  },
+  {
+    id: 10,
+    certificateTitle: "AI Fluency: Framework & Foundations",
+    issuingOrganization: "Anthropic",
+    dateIssued: "Sep 2025",
+    verificationLink: "http://verify.skilljar.com/c/znrbu2uz9xam",
+    credentialId: null,
+    skills: [],
+    covered: "Comprehensive understanding of AI frameworks, foundations, and practical applications",
+    certificateImage: "/data/images/certificates/anthropic-ai-fluency.png",
+    thumbnailImage: "/data/images/certificates/anthropic-ai-fluency.png"
   }
 ];
