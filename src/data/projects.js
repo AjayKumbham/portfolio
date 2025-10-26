@@ -5,12 +5,12 @@ export const projectsData = [
     description: "A sleek, high-performance personal portfolio site built to highlight your skills, projects, and professional journey — fully responsive, theme-aware, and SEO-optimized.",
     features: [
       "<strong>Responsive & Adaptive Design :</strong> Implements a fluid layout and breakpoints so the site looks and functions beautifully across all screen sizes (mobile, tablet, desktop)",
-      "<strong>Dark / Light Theme with Persistence :</strong> Users can toggle between dark and light modes; preference is stored (e.g. via local storage or context), ensuring consistent experience across sessions",
-      "<strong>Performance-First Approach :</strong> Asset optimization, lazy loading, and minimized bundle sizes lead to blazing-fast load times (GTmetrix & Lighthouse metrics reflect top scores)",
-      "<strong>SEO & Accessibility Focus :</strong> Semantic HTML, meta tags, structured data, ARIA labels, and keyboard navigation support to boost discoverability and usability",
-      "<strong>Modular & Scalable Component Architecture :</strong> Structured into reusable React components and data-driven sections (e.g. via JSON/data files), making it easy to extend or re-skin"
+      "<strong>Dark / Light Theme with Persistence :</strong> Users can toggle between dark and light modes; preference is stored via local storage and React Context, ensuring consistent experience across sessions",
+      "<strong>Performance-First Approach :</strong> Asset optimization and minimized bundle sizes lead to blazing-fast load times (GTmetrix & Lighthouse metrics reflect top scores)",
+      "<strong>SEO & Accessibility Focus :</strong> Semantic HTML, meta tags, XML sitemap, and ARIA labels to boost discoverability and usability",
+      "<strong>Modular & Scalable Component Architecture :</strong> Structured into reusable React components and data-driven sections via JavaScript modules in src/data/, making it easy to extend or customize"
     ],
-    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "ESLint", "PostCSS"],
+    tech: ["TypeScript", "React", "TailwindCSS", "Vite", "PostCSS", "ESLint", "Vercel"],
     image: "/data/images/projects/portfolio.png",
     github: "https://github.com/AjayKumbham/portfolio",
     live: "https://portfolio-ajaykumbham.vercel.app/",
@@ -27,10 +27,10 @@ export const projectsData = [
       "<strong>Newsletter & Subscriber Automation :</strong> Integrated with Brevo (Sendinblue) to automatically notify subscribers when a new post goes live, manage subscriber lists, and allow unsubscribe flows",
       "<strong>Performance, SEO & Media Handling :</strong> Built with best practices: syntax highlighting for code snippets, image uploads to Supabase storage, meta tags, responsive design, and performance optimizations via Vite"
     ],
-    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Supabase (PostgreSQL, Auth, Storage, RLS)", "Brevo (Sendinblue)", "React Router", "FormSubmit"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Supabase (PostgreSQL, Auth, Storage)", "Brevo (Sendinblue)", "FormSubmit"],
     image: "/data/images/projects/blog-platform.png",
     github: "https://github.com/AjayKumbham/personal-blog-platform",
-    live: "https://personal-blog-platform-demo.vercel.app/",
+    live: "https://blog-ajaykumbham.vercel.app/",
     hasLiveDemo: true
   },
   {
@@ -44,11 +44,10 @@ export const projectsData = [
       "<strong>Scalable API-Driven Backend :</strong> Designed with modular, RESTful APIs to decouple front-end and back-end, facilitating easy future integrations (e.g. third-party lab systems, telehealth modules, external insurance APIs)",
       "<strong>Security, Compliance & Documentation Focus :</strong> Implements security best practices (authentication, data validation, access control), and is backed by extensive documentation (API reference, system architecture, data models, UI flows) for developers and future maintainers"
     ],
-    tech: ["React", "TypeScript", "Tailwind CSS", "JavaScript", "Java (Spring Boot)", "Node.js", "REST APIs", "JWT / Auth", "PostgreSQL", "CI/CD tools", "AWS / Vercel"],
+    tech: ["React", "Vite", "TailwindCSS", "Java", "SpringBoot", "Spring Security", "Spring Data JPA", "Hibernate", "MySQL/PostgreSQL", "JWT", "Maven", "Twilio"],
     image: "/data/images/projects/price-a-med.png",
     github: "https://github.com/AjayKumbham/healthcare-services-and-pharmacy-platform",
-    live: "https://price-a-med-demo.vercel.app/",
-    hasLiveDemo: true
+    hasLiveDemo: false
   },
   {
     id: 4,
@@ -61,7 +60,7 @@ export const projectsData = [
       "<strong>Adaptive Model Updates & Consensus Aggregation :</strong> Merges local model updates or anomaly signals via decentralized consensus or aggregation (e.g. via weighted averaging or secure aggregation), allowing the system to evolve with new fraud patterns",
       "<strong>Privacy, Explainability & Real-World Viability Emphasis :</strong> Balances detection power with interpretability (e.g. exposing error scores or feature importances) and highlights how the architecture bridges the gap between research and production readiness"
     ],
-    tech: ["Python", "Scikit-learn", "Flask", "Cryptographic Primitives"],
+    tech: ["Node.js", "Python", "React", "Express.js", "Flask", "scikit-learn", "TailwindCSS", "Vite", "TypeScript"],
     image: "/data/images/projects/fraud-detection.png",
     github: "https://github.com/AjayKumbham/decentralized-fraud-detection-poc",
     hasLiveDemo: false
@@ -77,7 +76,7 @@ export const projectsData = [
       "<strong>Integrations with External Services & Data Sources :</strong> Connects seamlessly to external systems (such as payment gateways, third-party health services, or data providers), handling transform, error retry logic, and fallback gracefully",
       "<strong>Logging, Monitoring & Error Handling Strategy :</strong> Implements centralized logging, structured error responses, health-check endpoints, metrics (e.g. via Prometheus or similar), and alerting ensuring maintainability and observability in production"
     ],
-    tech: ["Java (Spring Boot)", "REST API", "JWT", "SQL Database", "API Gateway", "CI/CD Pipeline"],
+    tech: ["Java", "Spring Boot", "Spring Security", "MySQL", "Redis", "JWT", "Maven"],
     image: "/data/images/projects/evernorth-backend.png",
     github: "https://github.com/AjayKumbham/evernorth-backend-api",
     hasLiveDemo: false
@@ -93,10 +92,10 @@ export const projectsData = [
       "<strong>User & Role Workflow Documentation :</strong> Covers use cases for each stakeholder (patient, pharmacy, admin), describing step‑by‑step flows such as prescription upload, order fulfillment, membership handling, and error states",
       "<strong>Versioning, Change Log & Contribution Guide :</strong> Maintains version control of docs, change logs for every update, and contribution guidelines making the documentation robust, updatable, and collaborative"
     ],
-    tech: ["Markdown", "PlantUML / Mermaid", "Swagger / OpenAPI", "Git / GitHub Pages", "UML Diagram Tools", "JSON / YAML Schema Files"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     image: "/data/images/projects/healthcare-docs.png",
     github: "https://github.com/AjayKumbham/healthcare-services-and-pharmacy-docs",
-    live: "https://healthcare-docs-demo.github.io/",
+    live: "https://ajaykumbham.github.io/healthcare-services-and-pharmacy-docs/",
     hasLiveDemo: true
   },
   {
@@ -110,7 +109,7 @@ export const projectsData = [
       "<strong>Clear Error Handling & Response Standardization :</strong> Implements consistent error codes, HTTP status semantics (401, 403, 400), and structured JSON responses making it easy for API clients to integrate and respond to auth states",
       "<strong>Extensible & Integratable Architecture :</strong> Designed to be dropped into any backend stack, with modular token logic, middleware integration, and easy hooks for role-based claims or scope-based access control"
     ],
-    tech: ["Node.js", "Express", "jsonwebtoken", "bcrypt", "PostgreSQL", "dotenv", "REST API", "ORM / Query Builder", "Middleware Pattern"],
+    tech: ["Spring Boot", "Spring Security", "JWT", "BCrypt", "Java Mail", "MySQL", "Maven", "Java"],
     image: "/data/images/projects/jwt-auth.png",
     github: "https://github.com/AjayKumbham/jwt-auth-api",
     hasLiveDemo: false
