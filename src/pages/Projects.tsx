@@ -3,7 +3,20 @@ import React from 'react';
 import { projectsData } from '../data/projects';
 
 const Projects: React.FC = () => {
-  const ProjectCard: React.FC<{ project: any }> = ({ project }) => {
+  interface Project {
+    id: number;
+    title: string;
+    description: string;
+    features: string[];
+    tech: string[];
+    image: string;
+    github: string;
+    live?: string;
+    hasLiveDemo: boolean;
+    featured?: boolean;
+  }
+
+  const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     // Defensive logging
     console.log("[ProjectCard] Rendering project:", project);
 

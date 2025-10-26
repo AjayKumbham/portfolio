@@ -4,7 +4,18 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Eye, Trophy, MapPin, Calendar, TrendingUp, FileText } from "lucide-react";
 
 const Achievements: React.FC = () => {
-  const [selectedAchievement, setSelectedAchievement] = useState<any | null>(null);
+  interface Achievement {
+    id: number;
+    title: string;
+    description: string;
+    date: string;
+    location: string;
+    category: string;
+    image: string;
+    details: string;
+  }
+
+  const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 py-20">

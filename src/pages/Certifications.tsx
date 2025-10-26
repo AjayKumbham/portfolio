@@ -7,7 +7,21 @@ import { Button } from "@/components/ui/button";
 import { GraduationCap, Award, Calendar, Building, ExternalLink, Shield, Eye } from "lucide-react";
 
 // Unified Certificate Card Component
-const CertificateCard: React.FC<{ cert: any }> = ({ cert }) => {
+interface Certification {
+  id: number;
+  title: string;
+  issuer: string;
+  date: string;
+  credentialId?: string;
+  verificationUrl?: string;
+  skills: string[];
+  description: string;
+  image: string;
+  thumbnail: string;
+  category: string;
+}
+
+const CertificateCard: React.FC<{ cert: Certification }> = ({ cert }) => {
   const [imageError, setImageError] = useState(false);
   const [thumbError, setThumbError] = useState(false);
 
