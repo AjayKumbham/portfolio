@@ -44,24 +44,6 @@ const CertificateCard: React.FC<{ cert: Certification }> = ({ cert }) => {
               </div>
             )}
             
-            {/* Overlay with organization logo */}
-            <div className="absolute top-3 left-3">
-              {cert.organizationLogo && !imageError ? (
-                <div className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg p-1.5 shadow-lg">
-                  <img 
-                    src={cert.organizationLogo} 
-                    alt={cert.issuingOrganization}
-                    className="w-full h-full object-contain"
-                    onError={() => setImageError(true)}
-                  />
-                </div>
-              ) : (
-                <div className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg p-1.5 shadow-lg flex items-center justify-center">
-                  <Building className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                </div>
-              )}
-            </div>
-
             {/* Duration/Type indicator */}
             <div className="absolute bottom-3 right-3">
               <div className="bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs font-medium">

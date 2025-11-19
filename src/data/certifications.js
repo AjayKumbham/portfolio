@@ -2,15 +2,15 @@
 export const certificationsData = [
   {
     id: 1,
-    certificateTitle: "Artificial Intelligence Fundamentals",
-    issuingOrganization: "IBM SkillsBuild",
-    dateIssued: "Jun 2025",
-    verificationLink: "https://www.credly.com/badges/39bb6af3-5b3b-4ef7-9bd8-5b49b6680f9a",
+    certificateTitle: "Oracle Cloud Infrastructure 2025 Certified Developer Professional",
+    issuingOrganization: "Oracle University",
+    dateIssued: "Oct 2025",
+    verificationLink: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=2657066AB047F9E7CB07B5FA1406D2ED490CA371244E9FA8BD3E852A9F6C94A8',
     credentialId: null,
     skills: [],
-    covered: null,
-    certificateImage: "/data/images/certificates/ibm-skillsbuild.png",
-    thumbnailImage: "/data/images/certificates/ibm-skillsbuild.png"
+    covered: "Oracle Cloud Infrastructure development, cloud services, and professional-level cloud development competencies",
+    certificateImage: "/data/images/certificates/oci-developer.png",
+    thumbnailImage: "/data/images/certificates/oci-developer.png"
   },
   {
     id: 2,
@@ -26,54 +26,30 @@ export const certificationsData = [
   },
   {
     id: 3,
-    certificateTitle: "Career Essentials in Data Analysis",
-    issuingOrganization: "Microsoft & LinkedIn Learning",
-    dateIssued: "Jul 2025",
-    verificationLink: "https://www.linkedin.com/learning/certificates/b31e3ed02330d14575a98cf2593cf049e0d2a848e9058df97283e8432b3eca9f",
+    certificateTitle: "Google Gemini Certified Student",
+    issuingOrganization: "Google for Education",
+    dateIssued: "Nov 2025",
+    verificationLink: 'https://edu.google.accredible.com/8209fd28-923b-4abd-be7e-30e96168f3d7',
     credentialId: null,
     skills: [],
-    covered: null,
-    certificateImage: "/data/images/certificates/microsoft-linkedin.png",
-    thumbnailImage: "/data/images/certificates/microsoft-linkedin.png"
+    covered: "Demonstrated knowledge, skills, and basic competencies needed to use Google AI",
+    certificateImage: "/data/images/certificates/google-gemini-university-student.png",
+    thumbnailImage: "/data/images/certificates/google-gemini-university-student.png"
   },
   {
     id: 4,
-    certificateTitle: "Software Engineering Job Simulation",
-    issuingOrganization: "JPMorgan Chase & Co. (via Forage)",
+    certificateTitle: "Artificial Intelligence Fundamentals",
+    issuingOrganization: "IBM SkillsBuild",
     dateIssued: "Jun 2025",
-    verificationLink: null,
+    verificationLink: "https://www.credly.com/badges/39bb6af3-5b3b-4ef7-9bd8-5b49b6680f9a",
     credentialId: null,
     skills: [],
-    covered: "Project Setup, Kafka Integration, H2 Integration, REST API Integration, REST API Controller",
-    certificateImage: "/data/images/certificates/jpmorgan-chase.png",
-    thumbnailImage: "/data/images/certificates/jpmorgan-chase.png"
+    covered: null,
+    certificateImage: "/data/images/certificates/ibm-skillsbuild.png",
+    thumbnailImage: "/data/images/certificates/ibm-skillsbuild.png"
   },
   {
     id: 5,
-    certificateTitle: "GenAI Powered Data Analytics Job Simulation",
-    issuingOrganization: "Tata (via Forage)",
-    dateIssued: "Jun 2025",
-    verificationLink: null,
-    credentialId: null,
-    skills: [],
-    covered: "Exploratory Data Analysis, Risk Profiling, Predicting Delinquency with AI, Business Storytelling, AI-Driven Strategy Implementation",
-    certificateImage: "/data/images/certificates/tata.png",
-    thumbnailImage: "/data/images/certificates/tata.png"
-  },
-  {
-    id: 6,
-    certificateTitle: "Frontend Developer (React)",
-    issuingOrganization: "HackerRank",
-    dateIssued: "Jun 2025",
-    verificationLink: null,
-    credentialId: "E4751E66AFDC",
-    skills: [],
-    covered: null,
-    certificateImage: "/data/images/certificates/hackerrank.png",
-    thumbnailImage: "/data/images/certificates/hackerrank.png"
-  },
-  {
-    id: 7,
     certificateTitle: "Python Essentials 1",
     issuingOrganization: "Cisco Networking Academy & OpenEDG Python Institute",
     dateIssued: "Jun 2025",
@@ -85,19 +61,55 @@ export const certificationsData = [
     thumbnailImage: "/data/images/certificates/cisco.png"
   },
   {
+    id: 6,
+    certificateTitle: "Career Essentials in Data Analysis",
+    issuingOrganization: "Microsoft & LinkedIn Learning",
+    dateIssued: "Jul 2025",
+    verificationLink: "https://www.linkedin.com/learning/certificates/b31e3ed02330d14575a98cf2593cf049e0d2a848e9058df97283e8432b3eca9f",
+    credentialId: null,
+    skills: [],
+    covered: null,
+    certificateImage: "/data/images/certificates/microsoft-linkedin.png",
+    thumbnailImage: "/data/images/certificates/microsoft-linkedin.png"
+  },
+  {
+    id: 7,
+    certificateTitle: "Frontend Developer (React)",
+    issuingOrganization: "HackerRank",
+    dateIssued: "Jun 2025",
+    verificationLink: null,
+    credentialId: "E4751E66AFDC",
+    skills: [],
+    covered: null,
+    certificateImage: "/data/images/certificates/hackerrank.png",
+    thumbnailImage: "/data/images/certificates/hackerrank.png"
+  },
+  {
     id: 8,
-    certificateTitle: "AI Prompt Engineering Masterclass",
-    issuingOrganization: "Reliance Digital Store",
-    dateIssued: "Sep 2025",
+    certificateTitle: "Software Engineering Job Simulation",
+    issuingOrganization: "JPMorgan Chase & Co. (via Forage)",
+    dateIssued: "Jun 2025",
     verificationLink: null,
     credentialId: null,
     skills: [],
-    covered: "AI Prompt Engineering techniques, best practices for AI interaction, and future of AI technology",
-    certificateImage: "/data/images/certificates/aischool-ai.png",
-    thumbnailImage: "/data/images/certificates/aischool-ai.png"
+    covered: "Project Setup, Kafka Integration, H2 Integration, REST API Integration, REST API Controller",
+    certificateImage: "/data/images/certificates/jpmorgan-chase.png",
+    thumbnailImage: "/data/images/certificates/jpmorgan-chase.png"
   },
   {
     id: 9,
+    certificateTitle: "GenAI Powered Data Analytics Job Simulation",
+    issuingOrganization: "Tata (via Forage)",
+    dateIssued: "Jun 2025",
+    verificationLink: null,
+    credentialId: null,
+    skills: [],
+    covered: "Exploratory Data Analysis, Risk Profiling, Predicting Delinquency with AI, Business Storytelling, AI-Driven Strategy Implementation",
+    certificateImage: "/data/images/certificates/tata.png",
+    thumbnailImage: "/data/images/certificates/tata.png"
+  },
+  {
+    id: 10,
     certificateTitle: "Introduction to Model Context Protocol",
     issuingOrganization: "Anthropic",
     dateIssued: "Sep 2025",
@@ -109,7 +121,7 @@ export const certificationsData = [
     thumbnailImage: "/data/images/certificates/anthropic-mcp.png"
   },
   {
-    id: 10,
+    id: 11,
     certificateTitle: "AI Fluency: Framework & Foundations",
     issuingOrganization: "Anthropic",
     dateIssued: "Sep 2025",
@@ -119,5 +131,17 @@ export const certificationsData = [
     covered: "Comprehensive understanding of AI frameworks, foundations, and practical applications",
     certificateImage: "/data/images/certificates/anthropic-ai-fluency.png",
     thumbnailImage: "/data/images/certificates/anthropic-ai-fluency.png"
+  },
+  {
+    id: 12,
+    certificateTitle: "AI Prompt Engineering Masterclass",
+    issuingOrganization: "Reliance Digital Store",
+    dateIssued: "Sep 2025",
+    verificationLink: null,
+    credentialId: null,
+    skills: [],
+    covered: "AI Prompt Engineering techniques, best practices for AI interaction, and future of AI technology",
+    certificateImage: "/data/images/certificates/aischool-ai.png",
+    thumbnailImage: "/data/images/certificates/aischool-ai.png"
   }
 ];
