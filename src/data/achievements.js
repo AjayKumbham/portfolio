@@ -42,5 +42,27 @@ export const achievementsData = [
     icon: "🏅",
     certificateImage: "/data/images/achievements/achievement-csetop2.png",
     thumbnail: "/data/images/achievements/achievement-csetop2.png"
+  },
+  {
+    id: 5,
+    title: "National Level VJ Hackathon Finalist",
+    institution: "VNRVJIET, Hyderabad",
+    date: "Nov 2023",
+    rank: "Finalist",
+    performance: "Qualified for the final round of Victory & Joy in Smart Innovations hackathon at VNR VJIET, in collaboration with CSI SBC, Turing Hut, Gamma Club, GDSC & UnPlatforms.",
+    icon: "💻",
+    certificateImage: "/data/images/achievements/hackathon-finalist.jpg",
+    thumbnail: "/data/images/achievements/hackathon-finalist.jpg"
+  },
+  {
+    id: 6,
+    title: "Open Source Contributions",
+    institution: "GitHub",
+    date: "2024-2025",
+    rank: "5+ Contributions",
+    performance: "Contributed to Deno (JS/TS Runtime), Flower (Federated Learning), Gemini CLI (AI Agent), OpenAI Agents JS (AI SDK), and MCP Servers (Model Context Protocol).",
+    icon: "🌟",
+    certificateImage: "/data/images/achievements/open-source-contributions.png",
+    thumbnail: "/data/images/achievements/open-source-contributions.png"
   }
 ];

@@ -19,25 +19,25 @@ const Achievements: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Achievements</span>
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A showcase of top academic and competitive milestones.
           </p>
         </div>
 
         {/* Achievements Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {achievementsData.map((achievement) => (
             <div
               key={achievement.id}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
-              {/* Thumbnail Section - YouTube style */}
+              {/* Thumbnail Section */}
               {achievement.thumbnail && (
                 <div className="relative overflow-hidden">
                   <div className="aspect-video relative group-hover:scale-105 transition-transform duration-300">
@@ -47,13 +47,6 @@ const Achievements: React.FC = () => {
                       className="w-full h-full object-cover object-top"
                     />
                     
-                    {/* Overlay with achievement icon */}
-                    <div className="absolute top-3 left-3">
-                      <div className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg p-1.5 shadow-lg flex items-center justify-center">
-                        <span className="text-lg">{achievement.icon}</span>
-                      </div>
-                    </div>
-
                     {/* Achievement type indicator */}
                     <div className="absolute bottom-3 right-3">
                       <div className="bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs font-medium">
