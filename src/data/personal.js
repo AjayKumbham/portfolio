@@ -6,11 +6,11 @@ export const personalInfo = {
   location: "Hyderabad, Telangana, India",
   email: "ajaygoud.kumbham@gmail.com",
   phone: "+1 (555) 123-4567",
-  profileImage: "/data/images/profile-formal.jpg", // Place your profile image in public/data/images/
+  profileImage: "/data/images/professional-profile.png", // Place your profile image in public/data/images/
   resume: "/data/documents/resume.pdf", // Place your resume in public/data/documents/
   social: {
     github: "https://github.com/AjayKumbham/",
-    linkedin: "https://www.linkedin.com/in/kumbham-ajay-goud/",
+    linkedin: "https://www.linkedin.com/in/kumbham-ajay-goud25/",
     twitter: "https://twitter.com/alexjohnson"
   }
 };

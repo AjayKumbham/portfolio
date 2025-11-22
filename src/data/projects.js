@@ -1,23 +1,6 @@
 export const projectsData = [
-  {
+    {
     id: 1,
-    title: "Portfolio Website",
-    description: "A sleek, high-performance personal portfolio site built to highlight your skills, projects, and professional journey — fully responsive, theme-aware, and SEO-optimized.",
-    features: [
-      "<strong>Responsive & Adaptive Design :</strong> Implements a fluid layout and breakpoints so the site looks and functions beautifully across all screen sizes (mobile, tablet, desktop)",
-      "<strong>Dark / Light Theme with Persistence :</strong> Users can toggle between dark and light modes; preference is stored via local storage and React Context, ensuring consistent experience across sessions",
-      "<strong>Performance-First Approach :</strong> Asset optimization and minimized bundle sizes lead to blazing-fast load times (GTmetrix & Lighthouse metrics reflect top scores)",
-      "<strong>SEO & Accessibility Focus :</strong> Semantic HTML, meta tags, XML sitemap, and ARIA labels to boost discoverability and usability",
-      "<strong>Modular & Scalable Component Architecture :</strong> Structured into reusable React components and data-driven sections via JavaScript modules in src/data/, making it easy to extend or customize"
-    ],
-    tech: ["TypeScript", "React", "TailwindCSS", "Vite", "PostCSS", "ESLint", "Vercel"],
-    image: "/data/images/projects/portfolio.png",
-    github: "https://github.com/AjayKumbham/portfolio",
-    live: "https://portfolio-ajaykumbham.vercel.app/",
-    hasLiveDemo: true
-  },
-  {
-    id: 2,
     title: "Developer Blogging Platform",
     description: "A full-featured blogging platform built for developers to write, publish, and manage technical content — complete with newsletter integration, admin dashboard, and content workflows.",
     features: [
@@ -34,7 +17,7 @@ export const projectsData = [
     hasLiveDemo: true
   },
   {
-    id: 3,
+    id: 2,
     title: "Healthcare Services & Pharmacy Platform (Price A Med)",
     description: "An enterprise-grade, full-stack platform built to streamline healthcare services and pharmacy operations by integrating patient, pharmacy, and administrative workflows into a unified, secure, and scalable system.",
     features: [
@@ -45,8 +28,24 @@ export const projectsData = [
       "<strong>Security, Compliance & Documentation Focus :</strong> Implements security best practices (authentication, data validation, access control), and is backed by extensive documentation (API reference, system architecture, data models, UI flows) for developers and future maintainers"
     ],
     tech: ["React", "Vite", "TailwindCSS", "Java", "SpringBoot", "Spring Security", "Spring Data JPA", "Hibernate", "MySQL/PostgreSQL", "JWT", "Maven", "Twilio"],
-    image: "/data/images/projects/price-a-med.png",
+    image: "/data/images/projects/healthcare-and-pharmacy-platform.png",
     github: "https://github.com/AjayKumbham/healthcare-services-and-pharmacy-platform",
+    hasLiveDemo: false
+  },
+  {
+    id: 3,
+    title: "Evernorth Backend API",
+    description: "A robust, scalable backend service powering the Evernorth platform's core functionalities — designed to handle data orchestration, business logic, security, and integrations with front-end and third-party systems.",
+    features: [
+      "<strong>Modular Microservice Architecture :</strong> Designed to be modular and loosely coupled, enabling independent service scaling, clean separation of concerns, and ease of feature evolution without monolithic bottlenecks",
+      "<strong>Secure Authentication & Role-Based Access Control :</strong> Implements robust authentication (e.g. JWT, OAuth or similar), and fine-grained access rules so different user roles (admin, user, partner) access only what they should enhancing security and compliance",
+      "<strong>API Gateway & Request Routing + Throttling :</strong> Uses an API gateway or proxy layer to route requests, apply rate limiting, and manage versioning control ensuring resilience, forward compatibility, and controlled load",
+      "<strong>Integrations with External Services & Data Sources :</strong> Connects seamlessly to external systems (such as payment gateways, third-party health services, or data providers), handling transform, error retry logic, and fallback gracefully",
+      "<strong>Logging, Monitoring & Error Handling Strategy :</strong> Implements centralized logging, structured error responses, health-check endpoints, metrics (e.g. via Prometheus or similar), and alerting ensuring maintainability and observability in production"
+    ],
+    tech: ["Java", "Spring Boot", "Spring Security", "MySQL", "Redis", "JWT", "Maven"],
+    image: "/data/images/projects/evernorth-backend-api.png",
+    github: "https://github.com/AjayKumbham/evernorth-backend-api",
     hasLiveDemo: false
   },
   {
@@ -61,25 +60,26 @@ export const projectsData = [
       "<strong>Privacy, Explainability & Real-World Viability Emphasis :</strong> Balances detection power with interpretability (e.g. exposing error scores or feature importances) and highlights how the architecture bridges the gap between research and production readiness"
     ],
     tech: ["Node.js", "Python", "React", "Express.js", "Flask", "scikit-learn", "TailwindCSS", "Vite", "TypeScript"],
-    image: "/data/images/projects/fraud-detection.png",
+    image: "/data/images/projects/decentralized-fraud-detection-poc.png",
     github: "https://github.com/AjayKumbham/decentralized-fraud-detection-poc",
     hasLiveDemo: false
   },
-  {
+   {
     id: 5,
-    title: "Evernorth Backend API",
-    description: "A robust, scalable backend service powering the Evernorth platform's core functionalities — designed to handle data orchestration, business logic, security, and integrations with front-end and third-party systems.",
+    title: "Portfolio Website",
+    description: "A sleek, high-performance personal portfolio site built to highlight your skills, projects, and professional journey — fully responsive, theme-aware, and SEO-optimized.",
     features: [
-      "<strong>Modular Microservice Architecture :</strong> Designed to be modular and loosely coupled, enabling independent service scaling, clean separation of concerns, and ease of feature evolution without monolithic bottlenecks",
-      "<strong>Secure Authentication & Role-Based Access Control :</strong> Implements robust authentication (e.g. JWT, OAuth or similar), and fine-grained access rules so different user roles (admin, user, partner) access only what they should enhancing security and compliance",
-      "<strong>API Gateway & Request Routing + Throttling :</strong> Uses an API gateway or proxy layer to route requests, apply rate limiting, and manage versioning control ensuring resilience, forward compatibility, and controlled load",
-      "<strong>Integrations with External Services & Data Sources :</strong> Connects seamlessly to external systems (such as payment gateways, third-party health services, or data providers), handling transform, error retry logic, and fallback gracefully",
-      "<strong>Logging, Monitoring & Error Handling Strategy :</strong> Implements centralized logging, structured error responses, health-check endpoints, metrics (e.g. via Prometheus or similar), and alerting ensuring maintainability and observability in production"
+      "<strong>Responsive & Adaptive Design :</strong> Implements a fluid layout and breakpoints so the site looks and functions beautifully across all screen sizes (mobile, tablet, desktop)",
+      "<strong>Dark / Light Theme with Persistence :</strong> Users can toggle between dark and light modes; preference is stored via local storage and React Context, ensuring consistent experience across sessions",
+      "<strong>Performance-First Approach :</strong> Asset optimization and minimized bundle sizes lead to blazing-fast load times (GTmetrix & Lighthouse metrics reflect top scores)",
+      "<strong>SEO & Accessibility Focus :</strong> Semantic HTML, meta tags, XML sitemap, and ARIA labels to boost discoverability and usability",
+      "<strong>Modular & Scalable Component Architecture :</strong> Structured into reusable React components and data-driven sections via JavaScript modules in src/data/, making it easy to extend or customize"
     ],
-    tech: ["Java", "Spring Boot", "Spring Security", "MySQL", "Redis", "JWT", "Maven"],
-    image: "/data/images/projects/evernorth-backend.png",
-    github: "https://github.com/AjayKumbham/evernorth-backend-api",
-    hasLiveDemo: false
+    tech: ["TypeScript", "React", "TailwindCSS", "Vite", "PostCSS", "ESLint", "Vercel"],
+    image: "/data/images/projects/portfolio.png",
+    github: "https://github.com/AjayKumbham/portfolio",
+    live: "https://portfolio-ajaykumbham.vercel.app/",
+    hasLiveDemo: true
   },
   {
     id: 6,
@@ -93,8 +93,8 @@ export const projectsData = [
       "<strong>Versioning, Change Log & Contribution Guide :</strong> Maintains version control of docs, change logs for every update, and contribution guidelines making the documentation robust, updatable, and collaborative"
     ],
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    image: "/data/images/projects/healthcare-docs.png",
-    github: "https://github.com/AjayKumbham/healthcare-services-and-pharmacy-docs",
+    image: "/data/images/projects/healthcare-and-pharmacy-docs.png",
+    github: "https://github.com/AjayKumbham/healthcare-and-pharmacy-docs",
     live: "https://ajaykumbham.github.io/healthcare-services-and-pharmacy-docs/",
     hasLiveDemo: true
   },
@@ -110,7 +110,7 @@ export const projectsData = [
       "<strong>Extensible & Integratable Architecture :</strong> Designed to be dropped into any backend stack, with modular token logic, middleware integration, and easy hooks for role-based claims or scope-based access control"
     ],
     tech: ["Spring Boot", "Spring Security", "JWT", "BCrypt", "Java Mail", "MySQL", "Maven", "Java"],
-    image: "/data/images/projects/jwt-auth.png",
+    image: "/data/images/projects/jwt-auth-api.png",
     github: "https://github.com/AjayKumbham/jwt-auth-api",
     hasLiveDemo: false
   }
