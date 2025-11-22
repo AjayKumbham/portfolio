@@ -54,7 +54,7 @@ const Navigation: React.FC = () => {
           >
             <img 
               src="/personal-logo.jpg" 
-              alt="Kumbham Ajay Logo" 
+              alt="Ajay Kumbham Logo" 
               className="w-[1.875rem] h-[1.875rem] rounded-full object-cover border-2 border-blue-600 shadow-sm transform translate-y-[0.5px]"
             />
             
