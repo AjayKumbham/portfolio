@@ -142,7 +142,7 @@ portfolio/
 │   │       ├── achievements/
 │   │       ├── certificates/
 │   │       ├── projects/
-│   │       └── profile-formal.jpg
+│   │       └── professional-profile.png
 │   └── placeholder.svg
 ├── src/
 │   ├── components/
@@ -236,7 +236,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Kumbham Ajay Goud**
 - Email: ajaygoud.kumbham@gmail.com
-- LinkedIn: [Kumbham Ajay Goud](https://www.linkedin.com/in/kumbham-ajay-goud/)
+- LinkedIn: [Kumbham Ajay Goud](https://www.linkedin.com/in/kumbham-ajay-goud25/)
 - GitHub: [@AjayKumbham](https://github.com/AjayKumbham/)
 
 ## 🙏 Acknowledgments
