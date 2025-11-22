@@ -8,7 +8,7 @@ export const homeData = {
     nptelDescription: "NPTEL Top 1%",
     projectsCount: "10+", 
     projectsDescription: "Projects Built",
-    cgpa: "9.71",
-    cgpaDescription: "CGPA"
+    openSource: "5+",
+    openSourceDescription: "Open Source Contributions"
   }
 };

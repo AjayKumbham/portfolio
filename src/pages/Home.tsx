@@ -13,6 +13,27 @@ const Home: React.FC = () => {
   const topAchievements = achievementsData.slice(0, 2);
   const topCertifications = certificationsData.slice(0, 3);
 
+  // Function to get the most important technologies for each project
+  const getImportantTech = (projectTitle: string, techArray: string[]) => {
+    // Specific tech stacks for certain projects
+    const specificMappings: { [key: string]: string[] } = {
+      'Healthcare Services & Pharmacy Platform (Price A Med)': ['React', 'SpringBoot', 'MySQL', 'JWT'],
+      'Developer Blogging Platform': ['React', 'TailwindCSS', 'TypeScript', 'Supabase'],
+      'Evernorth Backend API': ['Spring Boot', 'JWT', 'Redis', 'MySQL']
+    };
+
+    // Check if project has specific mapping
+    if (specificMappings[projectTitle]) {
+      return specificMappings[projectTitle];
+    }
+
+    // Default: prioritize main frameworks/languages
+    const priority = ['React', 'TypeScript', 'JavaScript', 'Java', 'Spring Boot', 'SpringBoot', 'Node.js', 'Python', 'Next.js', 'Vue', 'Angular', 'TailwindCSS', 'Supabase', 'MySQL', 'PostgreSQL', 'Redis', 'JWT'];
+    const important = techArray.filter(tech => priority.some(p => tech.includes(p)));
+    const remaining = techArray.filter(tech => !priority.some(p => tech.includes(p)));
+    return [...important, ...remaining].slice(0, 4);
+  };
+
   return (
     <div className="bg-white dark:bg-gray-900">
       {/* Hero Section */}
@@ -63,8 +84,8 @@ const Home: React.FC = () => {
                   <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mt-1">{homeData.stats.projectsDescription}</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-lg sm:text-xl lg:text-2xl font-extrabold bg-gradient-to-r from-pink-600 to-blue-600 bg-clip-text text-transparent tracking-tight">{homeData.stats.cgpa}</div>
-                  <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mt-1">{homeData.stats.cgpaDescription}</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-extrabold bg-gradient-to-r from-pink-600 to-blue-600 bg-clip-text text-transparent tracking-tight">{homeData.stats.openSource}</div>
+                  <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mt-1">{homeData.stats.openSourceDescription}</div>
                 </div>
               </div>
             </div>
@@ -110,7 +131,7 @@ const Home: React.FC = () => {
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">{project.description}</p>
                   <div className="flex gap-2 flex-wrap mb-4">
-                    {project.tech.slice(0, 3).map((tech, i) => (
+                    {getImportantTech(project.title, project.tech).map((tech, i) => (
                       <span key={i} className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded">
                         {tech}
                       </span>

@@ -1,8 +1,8 @@
 export const experienceData = [
   {
     id: 1,
-    title: "Evernorth Health Services – Case Study",
-    company: "Evernorth Health Services – Case Study",
+    title: "Evernorth Health Services [Case Study]",
+    company: "Evernorth Health Services [Case Study]",
     role: "Backend Developer",
     duration: "Nov 2024 – Feb 2025",
     location: "Vardhaman Innovation Lab",
@@ -16,8 +16,8 @@ export const experienceData = [
   },
   {
     id: 2,
-    title: "National Institute of Electronics and Information Technology (NIELIT) – Virtual Internship",
-    company: "National Institute of Electronics and Information Technology (NIELIT) – Virtual Internship",
+    title: "National Institute of Electronics and Information Technology (NIELIT) [Virtual Internship]",
+    company: "National Institute of Electronics and Information Technology (NIELIT) [Virtual Internship]",
     role: "AI/ML Intern",
     duration: "Aug 2024 – Oct 2024",
     location: "Virtual",
