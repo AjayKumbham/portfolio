@@ -24,9 +24,9 @@ const Projects: React.FC = () => {
       <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden">
         <div className="flex flex-col md:flex-row">
           {/* Image Container with Browser Mockup */}
-          <div className="relative md:w-2/5 bg-white dark:bg-gray-800 flex flex-col">
-            {/* Browser Chrome/Header */}
-            <div className="bg-gray-200 dark:bg-gray-700 px-3 py-2.5 flex items-center gap-2 border-b border-gray-300 dark:border-gray-600 flex-shrink-0">
+          <div className="relative md:w-2/5 bg-white dark:bg-gray-800 flex flex-col h-64 md:h-auto">
+            {/* Browser Chrome/Header - Hidden on mobile */}
+            <div className="hidden md:flex bg-gray-200 dark:bg-gray-700 px-3 py-2.5 items-center gap-2 border-b border-gray-300 dark:border-gray-600 flex-shrink-0">
               {/* Traffic Light Buttons */}
               <div className="flex items-center gap-1.5">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
