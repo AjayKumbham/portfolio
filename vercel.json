@@ -1,5 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio-ajaykumbham.vercel.app"
+        }
+      ],
+      "destination": "https://ajaykumbham.vercel.app/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
-} 
+}
