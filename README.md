@@ -6,7 +6,7 @@
 [![Vite](https://img.shields.io/badge/Vite-4.4.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-🌐 **Live Site**: [https://ajaykumbham-portfolio.vercel.app/](https://ajaykumbham-portfolio.vercel.app/)
+🌐 **Live Site**: [https://ajaykumbham.vercel.app/](https://ajaykumbham.vercel.app/)
 
 A modern, responsive portfolio website showcasing my skills, projects, and professional journey. Built with React, TypeScript, and Tailwind CSS for optimal performance and user experience.
 
@@ -49,7 +49,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and profe
 - **Total Blocking Time:** 0ms
 - **Cumulative Layout Shift:** 0
 
-_Analyzed with GTmetrix on July 14, 2025. [View site](https://ajaykumbham-portfolio.vercel.app/)_
+_Analyzed with GTmetrix on July 14, 2025. [View site](https://ajaykumbham.vercel.app/)_
 
 ### Lighthouse Audit
 
@@ -60,7 +60,7 @@ _Analyzed with GTmetrix on July 14, 2025. [View site](https://ajaykumbham-portfo
 - **Best Practices:** 100
 - **SEO:** 100
 
-_Analyzed with Google Lighthouse, July 2025. [View site](https://ajaykumbham-portfolio.vercel.app/)_
+_Analyzed with Google Lighthouse, July 2025. [View site](https://ajaykumbham.vercel.app/)_
 
 ## 🛠️ Tech Stack
 
