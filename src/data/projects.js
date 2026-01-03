@@ -1,5 +1,5 @@
 export const projectsData = [
-    {
+  {
     id: 1,
     title: "Developer Blogging Platform",
     description: "A full-featured blogging platform built for developers to write, publish, and manage technical content — complete with newsletter integration, admin dashboard, and content workflows.",
@@ -64,7 +64,7 @@ export const projectsData = [
     github: "https://github.com/AjayKumbham/decentralized-fraud-detection-poc",
     hasLiveDemo: false
   },
-   {
+  {
     id: 5,
     title: "Portfolio Website",
     description: "A sleek, high-performance personal portfolio site built to highlight your skills, projects, and professional journey — fully responsive, theme-aware, and SEO-optimized.",
@@ -78,7 +78,7 @@ export const projectsData = [
     tech: ["TypeScript", "React", "TailwindCSS", "Vite", "PostCSS", "ESLint", "Vercel"],
     image: "/data/images/projects/portfolio.png",
     github: "https://github.com/AjayKumbham/portfolio",
-    live: "https://portfolio-ajaykumbham.vercel.app/",
+    live: "https://ajaykumbham.vercel.app/",
     hasLiveDemo: true
   },
   {
