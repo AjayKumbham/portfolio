@@ -14,11 +14,11 @@ const Navigation: React.FC = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Achievements', path: '/achievements' },
+    { name: 'Skills', path: '/skills' },
     { name: 'Experience', path: '/experience' },
     { name: 'Certifications', path: '/certifications' },
+    { name: 'Achievements', path: '/achievements' },
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -37,8 +37,8 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled
-        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-gray-700/20'
-        : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm'
+      ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-gray-700/20'
+      : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm'
       }`}>
       {/* Scroll Progress Bar */}
       <div className="absolute top-0 left-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-150 ease-out" style={{ width: `${scrollProgress}%` }}></div>
@@ -65,8 +65,8 @@ const Navigation: React.FC = () => {
                 key={item.path}
                 to={item.path}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${location.pathname === item.path
-                    ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
               >
                 {item.name}
@@ -121,8 +121,8 @@ const Navigation: React.FC = () => {
               to={item.path}
               onClick={() => setIsOpen(false)}
               className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${location.pathname === item.path
-                  ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                 }`}
             >
               {item.name}
