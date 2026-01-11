@@ -140,7 +140,7 @@ const Home: React.FC = () => {
                   <div className="flex gap-3">
                     {project.live && (
                       <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                        <ExternalLink className="w-4 h-4" /> Live Demo
+                        <ExternalLink className="w-4 h-4" /> Live
                       </a>
                     )}
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:underline">
