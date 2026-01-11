@@ -5,7 +5,7 @@ export const educationData = [
     institution: "Vardhaman College of Engineering",
     university: "JNTUH, Hyderabad",
     duration: "2022 – 2026",
-    result: "CGPA: 9.71 / 10"
+    result: "CGPA: 9.63 / 10"
   },
   {
     id: 2,
