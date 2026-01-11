@@ -8,36 +8,36 @@
 
 > A modern, high-performance portfolio website built with React, TypeScript, and Tailwind CSS.
 
-**🌐 Live Site:** [ajaykumbham.vercel.app](https://ajaykumbham.vercel.app/)
+**Live Site:** [ajaykumbham.vercel.app](https://ajaykumbham.vercel.app/)
 
 ---
 
-## ⚡ Performance
+## Performance
 
 ![PageSpeed Insights Report](public/data/images/pagespeed-report.png)
 
 **Google PageSpeed Insights Scores:**
-- 🟢 Performance: **95/100**
-- 🟢 Accessibility: **96/100**
-- 🟢 Best Practices: **100/100**
-- 🟢 SEO: **100/100**
+- Performance: **95/100**
+- Accessibility: **96/100**
+- Best Practices: **100/100**
+- SEO: **100/100**
 
-[View Full Report →](https://pagespeed.web.dev/analysis/https-ajaykumbham-vercel-app/6bpwhyeoxb?form_factor=desktop)
-
----
-
-## ✨ Features
-
-- 🎨 **Modern UI/UX** - Clean, professional design with smooth animations
-- 🌓 **Dark/Light Mode** - Theme toggle with persistent preference
-- 📱 **Fully Responsive** - Optimized for all devices and screen sizes
-- ⚡ **Fast Performance** - Optimized assets and lazy loading
-- ♿ **Accessible** - WCAG compliant with proper ARIA labels
-- 🔍 **SEO Optimized** - Proper meta tags and semantic HTML
+[View Full Report](https://pagespeed.web.dev/analysis/https-ajaykumbham-vercel-app/6bpwhyeoxb?form_factor=desktop)
 
 ---
 
-## � Quick Start
+## Features
+
+- **Modern UI/UX** - Clean, professional design with smooth animations
+- **Dark/Light Mode** - Theme toggle with persistent preference
+- **Fully Responsive** - Optimized for all devices and screen sizes
+- **Fast Performance** - Optimized assets and lazy loading
+- **Accessible** - WCAG compliant with proper ARIA labels
+- **SEO Optimized** - Proper meta tags and semantic HTML
+
+---
+
+## Quick Start
 
 ### Prerequisites
 - Node.js 16+ 
@@ -69,7 +69,7 @@ The optimized build will be in the `dist/` directory.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frontend**
 - React 18.2 - UI library
@@ -84,7 +84,7 @@ The optimized build will be in the `dist/` directory.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio/
@@ -104,7 +104,7 @@ portfolio/
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### Update Content
 
@@ -124,7 +124,7 @@ Replace files in `public/data/`:
 
 ---
 
-## � Available Scripts
+## Available Scripts
 
 ```bash
 npm run dev       # Start development server
@@ -135,7 +135,7 @@ npm run lint      # Run ESLint
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 1. Push code to GitHub
@@ -149,23 +149,23 @@ npm run lint      # Run ESLint
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## � Author
+## Author
 
 **Kumbham Ajay Goud**
 
-- 📧 Email: ajaygoud.kumbham@gmail.com
-- 💼 LinkedIn: [kumbham-ajay-goud25](https://www.linkedin.com/in/kumbham-ajay-goud25/)
-- 🐙 GitHub: [@AjayKumbham](https://github.com/AjayKumbham/)
+- Email: ajaygoud.kumbham@gmail.com
+- LinkedIn: [kumbham-ajay-goud25](https://www.linkedin.com/in/kumbham-ajay-goud25/)
+- GitHub: [@AjayKumbham](https://github.com/AjayKumbham/)
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built with:
 - [React](https://reactjs.org/)
@@ -177,9 +177,6 @@ Built with:
 
 <div align="center">
 
-⭐ **If you found this helpful, please give it a star!**
-
-Made with ❤️ by [Ajay Kumbham](https://ajaykumbham.vercel.app/)
+**If you found this helpful, please give it a star!**
 
 </div>
-
