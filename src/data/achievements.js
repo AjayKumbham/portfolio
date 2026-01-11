@@ -1,7 +1,7 @@
 export const achievementsData = [
   {
     id: 1,
-    title: "Top 1% All India, NPTEL Java Programming",
+    title: "Top 1% Performer in NPTEL Java Programming",
     institution: "IIT Kharagpur",
     date: "Apr 2024",
     rank: "Elite + Topper",
@@ -12,7 +12,7 @@ export const achievementsData = [
   },
   {
     id: 2,
-    title: "Top 1% All India, NPTEL Cloud Computing & Distributed Systems",
+    title: "Top 1% Performer in NPTEL Cloud Computing & Distributed Systems",
     institution: "IIT Kanpur",
     date: "Mar 2025",
     rank: "Gold + Topper",

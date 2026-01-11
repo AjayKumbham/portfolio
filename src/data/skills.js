@@ -1,6 +1,6 @@
 console.log("[skills.js] Loaded and softSkillsData export is available!");
 
-// Data for soft skills (simple list)
+// Data for soft skills 
 const softSkillsData = [
   { name: "Problem Solving" },
   { name: "Attention to Detail" },
@@ -11,48 +11,51 @@ const softSkillsData = [
   { name: "Team Leadership" }
 ];
 
-// Data for technical skills (as requested)
+// Data for technical skills 
 const skillsData = {
   programmingLanguages: [
-    { name: "Java (Primary)" },
+    { name: "Java" },
+    { name: "JavaScript" },
     { name: "Python" },
-    { name: "JavaScript" }
+    { name: "SQL" }
   ],
-  fullStackDevelopment: [
+  webTechnologies: [
     { name: "HTML" },
     { name: "CSS" },
-    { name: "React.js" },
+    { name: "React" },
     { name: "Node.js" },
-    { name: "Spring Boot" }
-  ],
-  aiMl: [
-    { name: "TensorFlow" },
-    { name: "Scikit-learn" },
-    { name: "LangChain" },
-    { name: "NumPy & Pandas" },
-    { name: "Matplotlib & Seaborn" }
+    { name: "Express.js" },
+    { name: "Spring Boot" },
+    { name: "FastAPI" }
   ],
   databases: [
-    { name: "SQL (Query Language)" },
     { name: "MySQL" },
+    { name: "PostgreSQL" },
     { name: "MongoDB" },
-    { name: "Supabase" }
+    { name: "Redis" }
   ],
-  devToolsPlatforms: [
-    { name: "Git & GitHub" },
+  cloudDevOps: [
+    { name: "AWS" },
     { name: "Docker" },
-    { name: "VS Code" },
-    { name: "Postman" }
+    { name: "Git" },
+    { name: "GitHub" },
+    { name: "GitHub Actions" },
+    { name: "CI/CD Pipelines" }
   ],
-  relevantCoursework: [
+  csFundamentals: [
     { name: "Data Structures & Algorithms" },
+    { name: "OOP" },
+    { name: "OS" },
     { name: "DBMS" },
-    { name: "Operating Systems" },
     { name: "Computer Networks" },
-    { name: "Object-Oriented Programming (Java)" },
-    { name: "Software Engineering" },
-    { name: "Artificial Intelligence" },
-    { name: "Machine Learning" }
+    { name: "Software Engineering" }
+  ],
+  toolsPlatforms: [
+    { name: "Linux" },
+    { name: "VS Code" },
+    { name: "Postman" },
+    { name: "Jupyter Notebook" },
+    { name: "Swagger" }
   ]
 };
 
