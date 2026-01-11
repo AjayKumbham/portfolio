@@ -98,14 +98,14 @@ export const certificationsData = [
   },
   {
     id: 9,
-    certificateTitle: "AI Fluency: Framework & Foundations",
-    issuingOrganization: "Anthropic",
-    dateIssued: "Sep 2025",
-    verificationLink: "http://verify.skilljar.com/c/znrbu2uz9xam",
-    credentialId: null,
+    certificateTitle: "Software Engineer",
+    issuingOrganization: "HackerRank",
+    dateIssued: "Dec 2025",
+    verificationLink: "https://www.hackerrank.com/certificates/7059ad3295de",
+    credentialId: "7059AD3295DE",
     skills: [],
-    covered: "Comprehensive understanding of AI frameworks, foundations, and practical applications",
-    certificateImage: "/data/images/certificates/anthropic-ai-fluency.png",
-    thumbnailImage: "/data/images/certificates/anthropic-ai-fluency.png"
+    covered: "Passed HackerRank role certification test demonstrating software engineering competencies",
+    certificateImage: "/data/images/certificates/hackerrank-software-engineer.png",
+    thumbnailImage: "/data/images/certificates/hackerrank-software-engineer.png"
   }
 ];
