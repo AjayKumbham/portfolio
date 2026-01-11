@@ -18,16 +18,14 @@ const Navigation: React.FC = () => {
     { name: 'Projects', path: '/projects' },
     { name: 'Achievements', path: '/achievements' },
     { name: 'Experience', path: '/experience' },
-    { name: 'Education', path: '/education' },
     { name: 'Certifications', path: '/certifications' },
-    { name: 'Resume', path: '/resume' },
     { name: 'Contact', path: '/contact' }
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-      
+
       // Calculate scroll progress
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (window.scrollY / windowHeight) * 100;
@@ -38,26 +36,25 @@ const Navigation: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-gray-700/20' 
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled
+        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-gray-700/20'
         : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm'
-    }`}>
+      }`}>
       {/* Scroll Progress Bar */}
       <div className="absolute top-0 left-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-150 ease-out" style={{ width: `${scrollProgress}%` }}></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center space-x-3 text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
           >
-            <img 
-              src="/personal-logo.jpg" 
-              alt="Ajay Kumbham Logo" 
+            <img
+              src="/personal-logo.jpg"
+              alt="Ajay Kumbham Logo"
               className="w-[1.875rem] h-[1.875rem] rounded-full object-cover border-2 border-blue-600 shadow-sm transform translate-y-[0.5px]"
             />
-            
+
             <span>{personalInfo.name}</span>
           </Link>
 
@@ -67,11 +64,10 @@ const Navigation: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  location.pathname === item.path
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${location.pathname === item.path
                     ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -124,11 +120,10 @@ const Navigation: React.FC = () => {
               key={item.path}
               to={item.path}
               onClick={() => setIsOpen(false)}
-              className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                location.pathname === item.path
+              className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${location.pathname === item.path
                   ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
                   : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-              }`}
+                }`}
             >
               {item.name}
             </Link>

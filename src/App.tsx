@@ -12,9 +12,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Achievements from "./pages/Achievements";
 import Experience from "./pages/Experience";
-import Education from "./pages/Education";
 import Certifications from "./pages/Certifications";
-import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
@@ -45,9 +43,7 @@ const AnimatedRoutes = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/education" element={<Education />} />
           <Route path="/certifications" element={<Certifications />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
