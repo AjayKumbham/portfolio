@@ -1,255 +1,185 @@
-# Kumbham Ajay Goud - Portfolio
+# Portfolio Website
 
-[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![Vite](https://img.shields.io/badge/Vite-4.4.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://ajaykumbham.vercel.app/)
+[![React](https://img.shields.io/badge/react-18.2.0-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-5.0.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/tailwind-3.3.0-blue)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-🌐 **Live Site**: [https://ajaykumbham.vercel.app/](https://ajaykumbham.vercel.app/)
+> A modern, high-performance portfolio website built with React, TypeScript, and Tailwind CSS.
 
-A modern, responsive portfolio website showcasing my skills, projects, and professional journey. Built with React, TypeScript, and Tailwind CSS for optimal performance and user experience.
+**🌐 Live Site:** [ajaykumbham.vercel.app](https://ajaykumbham.vercel.app/)
 
-## 🚀 Features
+---
 
-### Core Features
-- **Responsive Design**: Fully responsive across all devices and screen sizes
-- **Dark/Light Theme**: Toggle between dark and light themes with persistent preference
-- **Modern UI/UX**: Clean, professional design with smooth animations and transitions
-- **Performance Optimized**: Fast loading times with optimized assets and lazy loading
-- **SEO Friendly**: Proper meta tags, structured data, and semantic HTML
+## ⚡ Performance
 
-### Portfolio Sections
-- **Home**: Hero section with introduction and call-to-action
-- **About**: Professional background, skills overview, and personal story
-- **Skills**: Technical skills with proficiency indicators
-- **Projects**: Showcase of projects with detailed descriptions and live demos
-- **Experience**: Work history and professional achievements
-- **Education**: Academic background and certifications
-- **Achievements**: Awards, certifications, and notable accomplishments
-- **Contact**: Contact form with social media links
+![PageSpeed Insights Report](public/data/images/pagespeed-report.png)
 
-### Technical Features
-- **TypeScript**: Full type safety and better development experience
-- **Component Architecture**: Modular, reusable components
-- **State Management**: React Context for theme management
-- **Form Handling**: Contact form with email integration
-- **Image Optimization**: Optimized project images and assets
-- **Accessibility**: WCAG compliant with proper ARIA labels
+**Google PageSpeed Insights Scores:**
+- 🟢 Performance: **95/100**
+- 🟢 Accessibility: **96/100**
+- 🟢 Best Practices: **100/100**
+- 🟢 SEO: **100/100**
 
-## 🏅 Performance & Quality
+[View Full Report →](https://pagespeed.web.dev/analysis/https-ajaykumbham-vercel-app/6bpwhyeoxb?form_factor=desktop)
 
-### GTmetrix Report
+---
 
-![GTmetrix Performance Report](public/data/images/gtmetrix-report.png)
+## ✨ Features
 
-- **Performance:** 100%
-- **Structure:** 100%
-- **Largest Contentful Paint:** 327ms
-- **Total Blocking Time:** 0ms
-- **Cumulative Layout Shift:** 0
+- 🎨 **Modern UI/UX** - Clean, professional design with smooth animations
+- 🌓 **Dark/Light Mode** - Theme toggle with persistent preference
+- 📱 **Fully Responsive** - Optimized for all devices and screen sizes
+- ⚡ **Fast Performance** - Optimized assets and lazy loading
+- ♿ **Accessible** - WCAG compliant with proper ARIA labels
+- 🔍 **SEO Optimized** - Proper meta tags and semantic HTML
 
-_Analyzed with GTmetrix on July 14, 2025. [View site](https://ajaykumbham.vercel.app/)_
+---
 
-### Lighthouse Audit
+## � Quick Start
 
-![Lighthouse Audit](public/data/images/lighthouse-report.png)
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
 
-- **Performance:** 100
-- **Accessibility:** 94
-- **Best Practices:** 100
-- **SEO:** 100
+### Installation
 
-_Analyzed with Google Lighthouse, July 2025. [View site](https://ajaykumbham.vercel.app/)_
+```bash
+# Clone repository
+git clone https://github.com/AjayKumbham/portfolio.git
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Visit `http://localhost:5173` to view the site.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The optimized build will be in the `dist/` directory.
+
+---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React 18.2.0**: Modern React with hooks and functional components
-- **TypeScript 5.0.0**: Type-safe JavaScript development
-- **Tailwind CSS 3.3.0**: Utility-first CSS framework
-- **Vite 4.4.0**: Fast build tool and development server
+**Frontend**
+- React 18.2 - UI library
+- TypeScript 5.0 - Type safety
+- Tailwind CSS 3.3 - Styling
+- Vite 4.4 - Build tool
 
-### UI Components
-- **Lucide React**: Beautiful, customizable icons
-- **Custom Components**: Tailored UI components for portfolio needs
-- **Responsive Grid**: CSS Grid and Flexbox for layouts
+**Tools & Libraries**
+- Lucide React - Icons
+- React Router - Navigation
+- PostCSS - CSS processing
 
-### Development Tools
-- **ESLint**: Code linting and formatting
-- **PostCSS**: CSS processing and optimization
-- **TypeScript Compiler**: Type checking and compilation
-
-### Deployment
-- **Static Site Generation**: Optimized for static hosting
-- **CDN Ready**: Optimized assets for global delivery
-
-## 📦 Installation
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn package manager
-
-### Setup Instructions
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/AjayKumbham/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. **Open in browser**
-   Navigate to `http://localhost:5173` to view the application
-
-## 🚀 Deployment
-
-### Build for Production
-```bash
-npm run build
-# or
-yarn build
-```
-
-### Deploy Options
-- **Vercel**: Connect your GitHub repository for automatic deployments
-- **Netlify**: Drag and drop the `dist` folder or connect via Git
-- **GitHub Pages**: Use GitHub Actions for automated deployment
-- **Any Static Host**: Upload the `dist` folder to any static hosting service
+---
 
 ## 📁 Project Structure
 
 ```
 portfolio/
 ├── public/
-│   ├── data/
-│   │   ├── documents/
-│   │   │   └── resume.pdf
-│   │   └── images/
-│   │       ├── achievements/
-│   │       ├── certificates/
-│   │       ├── projects/
-│   │       └── professional-profile.png
-│   └── placeholder.svg
+│   └── data/
+│       ├── documents/       # Resume PDF
+│       └── images/          # Project images, certificates
 ├── src/
-│   ├── components/
-│   │   ├── ui/           # Reusable UI components
-│   │   ├── Footer.tsx
-│   │   ├── Layout.tsx
-│   │   └── Navigation.tsx
-│   ├── contexts/
-│   │   └── ThemeContext.tsx
-│   ├── data/             # Static data files
-│   │   ├── about.js
-│   │   ├── achievements.js
-│   │   ├── certifications.js
-│   │   ├── education.js
-│   │   ├── experience.js
-│   │   ├── home.js
-│   │   ├── personal.js
-│   │   ├── projects.js
-│   │   ├── resume.js
-│   │   └── skills.js
-│   ├── hooks/
-│   │   ├── use-mobile.tsx
-│   │   └── use-toast.ts
-│   ├── pages/            # Page components
-│   │   ├── About.tsx
-│   │   ├── Achievements.tsx
-│   │   ├── Certifications.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Education.tsx
-│   │   ├── Experience.tsx
-│   │   ├── Home.tsx
-│   │   ├── Projects.tsx
-│   │   ├── Resume.tsx
-│   │   └── Skills.tsx
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
+│   ├── components/          # Reusable UI components
+│   ├── contexts/            # React contexts (theme)
+│   ├── data/                # Static content (projects, skills, etc.)
+│   ├── pages/               # Page components
+│   └── App.tsx
 ├── package.json
-├── tailwind.config.ts
-├── tsconfig.json
 └── vite.config.ts
 ```
 
+---
+
 ## 🎨 Customization
 
-You can easily customize the portfolio by editing the data files in `src/data/` (such as `personal.js`, `projects.js`, etc.) to use your own information, projects, and content. For images, PDFs, and other assets, simply replace the files in the `public/data/` directory (e.g., `images/`, `documents/`) with your own.
+### Update Content
 
-## 🔧 Available Scripts
+Edit files in `src/data/` to customize:
+- `personal.js` - Name, bio, social links
+- `projects.js` - Project showcase
+- `skills.js` - Technical skills
+- `experience.js` - Work history
+- `certifications.js` - Certifications
+
+### Update Assets
+
+Replace files in `public/data/`:
+- `images/professional-profile.png` - Profile photo
+- `documents/resume.pdf` - Resume PDF
+- `images/projects/` - Project screenshots
+
+---
+
+## � Available Scripts
 
 ```bash
-# Development
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
-npm run type-check   # Run TypeScript type checking
-
-# Package Management
-npm install          # Install dependencies
-npm update           # Update dependencies
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
+npm run lint      # Run ESLint
 ```
 
-## 📱 Browser Support
+---
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+## 🚢 Deployment
 
-## 🔒 Security
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Import repository in Vercel
+3. Deploy automatically
 
-- No sensitive data in client-side code
-- Secure form handling with proper validation
-- HTTPS recommended for production
-- Regular dependency updates
+### Other Platforms
+- **Netlify:** Drag & drop `dist/` folder
+- **GitHub Pages:** Use GitHub Actions
+- **Any Static Host:** Upload `dist/` folder
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+---
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+---
+
+## � Author
 
 **Kumbham Ajay Goud**
-- Email: ajaygoud.kumbham@gmail.com
-- LinkedIn: [Kumbham Ajay Goud](https://www.linkedin.com/in/kumbham-ajay-goud25/)
-- GitHub: [@AjayKumbham](https://github.com/AjayKumbham/)
 
-## 🙏 Acknowledgments
-
-- [React](https://reactjs.org/) - UI library
-- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
-- [Vite](https://vitejs.dev/) - Build tool
-- [Lucide](https://lucide.dev/) - Icons
-- [FormSubmit](https://formsubmit.co/) - Contact form handling
+- 📧 Email: ajaygoud.kumbham@gmail.com
+- 💼 LinkedIn: [kumbham-ajay-goud25](https://www.linkedin.com/in/kumbham-ajay-goud25/)
+- 🐙 GitHub: [@AjayKumbham](https://github.com/AjayKumbham/)
 
 ---
 
-⭐ If you found this portfolio helpful, please give it a star!
+## 🙏 Acknowledgments
 
+Built with:
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [Lucide Icons](https://lucide.dev/)
 
+---
+
+<div align="center">
+
+⭐ **If you found this helpful, please give it a star!**
+
+Made with ❤️ by [Ajay Kumbham](https://ajaykumbham.vercel.app/)
+
+</div>
 
