@@ -6,7 +6,7 @@ export const personalInfo = {
   location: "Hyderabad, Telangana, India",
   email: "ajaygoud.kumbham@gmail.com",
   phone: "+1 (555) 123-4567",
-  profileImage: "/data/images/professional-profile.png", // Place your profile image in public/data/images/
+  profileImage: "/personal-logo.jpg", // Place your profile image in public/
   resume: "/data/documents/resume.pdf", // Place your resume in public/data/documents/
   social: {
     github: "https://github.com/AjayKumbham/",
