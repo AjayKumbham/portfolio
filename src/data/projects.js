@@ -1,117 +1,126 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Developer Blogging Platform",
-    description: "A full-featured blogging platform built for developers to write, publish, and manage technical content — complete with newsletter integration, admin dashboard, and content workflows.",
-    features: [
-      "<strong>End-to-End CMS Experience :</strong> You built both the content authoring side (admin dashboard) and the public-facing read side, giving you real experience with full-stack content workflows (CRUD, publishing, drafts, etc.)",
-      "<strong>Dynamic Content & Filtering :</strong> Posts can be searched, filtered by tags, sorted, and display metadata such as read time enhancing usability and discoverability for readers",
-      "<strong>Secure Admin & Role-Based Control :</strong> The admin panel is backed by Supabase authentication and row-level security rules, ensuring only authorized users can create, edit, or publish content",
-      "<strong>Newsletter & Subscriber Automation :</strong> Integrated with Brevo (Sendinblue) to automatically notify subscribers when a new post goes live, manage subscriber lists, and allow unsubscribe flows",
-      "<strong>Performance, SEO & Media Handling :</strong> Built with best practices: syntax highlighting for code snippets, image uploads to Supabase storage, meta tags, responsive design, and performance optimizations via Vite"
+    title: "Distributed Data Fan-Out Engine",
+    description: "High-throughput data distribution engine that streams records from flat files and delivers them to multiple downstream systems simultaneously with built-in resilience and observability.",
+    points: [
+      "Ingests large datasets in CSV, JSONL, or fixed-width formats using constant-memory streaming",
+      "Delivers data in parallel to APIs, databases, queues, and services with rate limiting and backpressure",
+      "Includes production-grade reliability features such as retries, circuit breakers, and dead-letter handling"
     ],
-    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Supabase (PostgreSQL, Auth, Storage)", "Brevo (Sendinblue)", "FormSubmit"],
-    image: "/data/images/projects/blog-platform.png",
-    github: "https://github.com/AjayKumbham/personal-blog-platform",
-    live: "https://blog-ajaykumbham.vercel.app/",
-    hasLiveDemo: true
+    tech: ["Java", "Concurrency", "Distributed Systems", "Protocol Buffers", "Apache Avro"],
+    github: "https://github.com/AjayKumbham/distributed-data-fanout-engine"
   },
   {
     id: 2,
-    title: "Healthcare Services & Pharmacy Platform (Price A Med)",
-    description: "An enterprise-grade, full-stack platform built to streamline healthcare services and pharmacy operations by integrating patient, pharmacy, and administrative workflows into a unified, secure, and scalable system.",
-    features: [
-      "<strong>Role-Based Multi-Tenant Architecture :</strong> Built with distinct user roles (patients, pharmacies, admins) each having tailored views, permissions, and workflows ensuring clean separation of concerns and secure access control",
-      "<strong>End-to-End Prescription & Order Workflow :</strong> Enables patients to upload prescriptions, pharmacies to verify and fulfill orders, and admin/health services to monitor and manage the entire lifecycle bridging the gap between healthcare and retail pharmacy",
-      "<strong>Inventory & Membership Management :</strong> Pharmacies can manage inventory, stock levels, and alert on low stock. On the patient side, there are membership plans, patient dashboards, and personalized health tracking",
-      "<strong>Scalable API-Driven Backend :</strong> Designed with modular, RESTful APIs to decouple front-end and back-end, facilitating easy future integrations (e.g. third-party lab systems, telehealth modules, external insurance APIs)",
-      "<strong>Security, Compliance & Documentation Focus :</strong> Implements security best practices (authentication, data validation, access control), and is backed by extensive documentation (API reference, system architecture, data models, UI flows) for developers and future maintainers"
+    title: "Durable Execution Engine",
+    description: "Fault-tolerant workflow engine for Java that can resume long-running processes exactly where they stopped after crashes or restarts, without repeating completed steps.",
+    points: [
+      "Persists workflow state at each step and replays results instead of re-executing operations",
+      "Supports parallel execution, retries, and deterministic step sequencing for complex flows",
+      "Built for production scenarios like microservice sagas, onboarding pipelines, and ETL workflows"
     ],
-    tech: ["React", "Vite", "TailwindCSS", "Java", "SpringBoot", "Spring Security", "Spring Data JPA", "Hibernate", "MySQL/PostgreSQL", "JWT", "Maven", "Twilio"],
-    image: "/data/images/projects/healthcare-and-pharmacy-platform.png",
-    github: "https://github.com/AjayKumbham/healthcare-services-and-pharmacy-platform",
-    hasLiveDemo: false
+    tech: ["Java", "SQLite", "HikariCP", "Concurrency", "Workflow Orchestration"],
+    github: "https://github.com/AjayKumbham/native-durable-execution-engine"
   },
   {
     id: 3,
-    title: "Evernorth Backend API",
-    description: "A robust, scalable backend service powering the Evernorth platform's core functionalities — designed to handle data orchestration, business logic, security, and integrations with front-end and third-party systems.",
-    features: [
-      "<strong>Modular Microservice Architecture :</strong> Designed to be modular and loosely coupled, enabling independent service scaling, clean separation of concerns, and ease of feature evolution without monolithic bottlenecks",
-      "<strong>Secure Authentication & Role-Based Access Control :</strong> Implements robust authentication (e.g. JWT, OAuth or similar), and fine-grained access rules so different user roles (admin, user, partner) access only what they should enhancing security and compliance",
-      "<strong>API Gateway & Request Routing + Throttling :</strong> Uses an API gateway or proxy layer to route requests, apply rate limiting, and manage versioning control ensuring resilience, forward compatibility, and controlled load",
-      "<strong>Integrations with External Services & Data Sources :</strong> Connects seamlessly to external systems (such as payment gateways, third-party health services, or data providers), handling transform, error retry logic, and fallback gracefully",
-      "<strong>Logging, Monitoring & Error Handling Strategy :</strong> Implements centralized logging, structured error responses, health-check endpoints, metrics (e.g. via Prometheus or similar), and alerting ensuring maintainability and observability in production"
+    title: "Local AI Assistant",
+    description: "Production-grade chat interface for running large language models locally, enabling private AI conversations with real-time streaming responses.",
+    points: [
+      "Supports multi-turn conversations with session management and model switching",
+      "Streams responses token-by-token for a real-time chat experience",
+      "Connects a modern React interface to local LLMs via FastAPI backend"
     ],
-    tech: ["Java", "Spring Boot", "Spring Security", "MySQL", "Redis", "JWT", "Maven"],
-    image: "/data/images/projects/evernorth-backend-api.png",
-    github: "https://github.com/AjayKumbham/evernorth-backend-api",
-    hasLiveDemo: false
+    tech: ["React", "TypeScript", "FastAPI", "Ollama", "MongoDB"],
+    github: "https://github.com/AjayKumbham/private-local-ai-companion"
   },
   {
     id: 4,
-    title: "Decentralized Fraud Detection (Proof-of-Concept)",
-    description: "A pioneering proof-of-concept platform combining decentralized learning and anomaly detection to flag fraudulent transactions—without centralizing sensitive data—and demonstrate the viability of privacy-preserving fraud systems.",
-    features: [
-      "<strong>Federated / Decentralized Learning Approach :</strong> Trains detection models across distributed nodes (e.g. multiple data silos or institutions) without sharing raw data, ensuring privacy and compliance with data protection regulations",
-      "<strong>Anomaly Detection via Reconstruction & Outlier Scoring :</strong> Implements unsupervised (or semi-supervised) techniques like autoencoders or reconstruction error scoring to detect deviations from normal patterns ideal for fraud in sparse-label environments",
-      "<strong>Blockchain-Backed Audit & Tamper Evidence :</strong> Uses a decentralized ledger to record detection decisions, model updates, or alerts immutably providing a verifiable audit trail and resisting tampering or backdoor manipulation",
-      "<strong>Adaptive Model Updates & Consensus Aggregation :</strong> Merges local model updates or anomaly signals via decentralized consensus or aggregation (e.g. via weighted averaging or secure aggregation), allowing the system to evolve with new fraud patterns",
-      "<strong>Privacy, Explainability & Real-World Viability Emphasis :</strong> Balances detection power with interpretability (e.g. exposing error scores or feature importances) and highlights how the architecture bridges the gap between research and production readiness"
+    title: "Healthcare Services & Pharmacy Platform",
+    description: "Full-stack healthcare platform designed to manage pharmacy operations, prescriptions, and patient services in one unified system with role-based access and modern user experience.",
+    points: [
+      "Supports patients, pharmacies, and administrators with tailored dashboards and workflows",
+      "Handles prescriptions, inventory, orders, and memberships end-to-end",
+      "Built with a modular, API-driven architecture designed for scalability and real-world use"
     ],
-    tech: ["Node.js", "Python", "React", "Express.js", "Flask", "scikit-learn", "TailwindCSS", "Vite", "TypeScript"],
-    image: "/data/images/projects/decentralized-fraud-detection-poc.png",
-    github: "https://github.com/AjayKumbham/decentralized-fraud-detection-poc",
-    hasLiveDemo: false
+    tech: ["Java", "Spring Boot", "React", "REST APIs", "MySQL"],
+    github: "https://github.com/AjayKumbham/healthcare-services-and-pharmacy-platform",
+    live: "https://ajaykumbham.github.io/healthcare-services-and-pharmacy-docs/"
   },
   {
     id: 5,
-    title: "Portfolio Website",
-    description: "A sleek, high-performance personal portfolio site built to highlight your skills, projects, and professional journey — fully responsive, theme-aware, and SEO-optimized.",
-    features: [
-      "<strong>Responsive & Adaptive Design :</strong> Implements a fluid layout and breakpoints so the site looks and functions beautifully across all screen sizes (mobile, tablet, desktop)",
-      "<strong>Dark / Light Theme with Persistence :</strong> Users can toggle between dark and light modes; preference is stored via local storage and React Context, ensuring consistent experience across sessions",
-      "<strong>Performance-First Approach :</strong> Asset optimization and minimized bundle sizes lead to blazing-fast load times (GTmetrix & Lighthouse metrics reflect top scores)",
-      "<strong>SEO & Accessibility Focus :</strong> Semantic HTML, meta tags, XML sitemap, and ARIA labels to boost discoverability and usability",
-      "<strong>Modular & Scalable Component Architecture :</strong> Structured into reusable React components and data-driven sections via JavaScript modules in src/data/, making it easy to extend or customize"
+    title: "Zoomify (Video Conferencing App)",
+    description: "Full-featured video conferencing application enabling real-time meetings with video, audio, chat, and collaboration tools directly in the browser.",
+    points: [
+      "Supports HD video calls, screen sharing, chat, and virtual collaboration features like whiteboard",
+      "Built on WebRTC for peer-to-peer communication with Socket.io for signaling and real-time updates",
+      "Includes meeting controls such as passwords, waiting rooms, recording, and participant management"
     ],
-    tech: ["TypeScript", "React", "TailwindCSS", "Vite", "PostCSS", "ESLint", "Vercel"],
-    image: "/data/images/projects/portfolio.png",
-    github: "https://github.com/AjayKumbham/portfolio",
-    live: "https://ajaykumbham.vercel.app/",
-    hasLiveDemo: true
+    tech: ["React", "Node.js", "Express", "MongoDB", "WebRTC", "Socket.io"],
+    github: "https://github.com/AjayKumbham/zoomify"
   },
   {
     id: 6,
-    title: "Healthcare Services & Pharmacy Docs",
-    description: "A comprehensive documentation hub detailing the architecture, APIs, data models, and user workflows of a full‑stack healthcare & pharmacy platform — designed to support developer onboarding, maintainability, and future growth.",
-    features: [
-      "<strong>Clear System Architecture Blueprint :</strong> Contains well‑structured diagrams (e.g., component diagrams, sequence flows) that clearly explain how different modules (patients, pharmacies, admin) interact, promoting clarity for new developers or architects",
-      "<strong>API Reference & Usage Examples :</strong> Provides detailed API endpoints, request/response schemas, authentication workflows, and sample payloads ensuring external developers or internal teams can integrate confidently and correctly",
-      "<strong>Data Models & Schema Definitions :</strong> Documents entity relationships, field definitions, validation rules, and constraints (e.g., for prescriptions, inventory, user roles), establishing a single source of truth for development and maintenance",
-      "<strong>User & Role Workflow Documentation :</strong> Covers use cases for each stakeholder (patient, pharmacy, admin), describing step‑by‑step flows such as prescription upload, order fulfillment, membership handling, and error states",
-      "<strong>Versioning, Change Log & Contribution Guide :</strong> Maintains version control of docs, change logs for every update, and contribution guidelines making the documentation robust, updatable, and collaborative"
+    title: "Evernorth Backend API (Healthcare)",
+    description: "Industry-style backend API built from a real-time case study, simulating a secure and scalable enterprise system with authentication, profile management, payments, and health records.",
+    points: [
+      "Implements a two-step OTP-based authentication flow with JWT for secure user verification",
+      "Provides comprehensive modules including profiles, payments, addresses, dependents, and health records",
+      "Designed with production-focused security features like rate limiting, CSRF protection, token blacklisting, and input validation"
     ],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    image: "/data/images/projects/healthcare-and-pharmacy-docs.png",
-    github: "https://github.com/AjayKumbham/healthcare-and-pharmacy-docs",
-    live: "https://ajaykumbham.github.io/healthcare-services-and-pharmacy-docs/",
-    hasLiveDemo: true
+    tech: ["Spring Boot", "MySQL", "JWT", "Redis", "REST APIs"],
+    github: "https://github.com/AjayKumbham/evernorth-backend-api",
+    live: "https://ajaykumbham.github.io/backend-api-docs/"
   },
   {
     id: 7,
-    title: "JWT Auth API",
-    description: "A secure, standards-based authentication service built to issue, validate, and refresh JSON Web Tokens (JWTs), enabling stateless, scalable token-based authentication for client applications.",
-    features: [
-      "<strong>Complete Auth Flow Implementation :</strong>  Supports user registration, login, token issuance (access & refresh), token refresh, and logout/revocation covering the full lifecycle of session management",
-      "<strong>Strong Security Measures :</strong> Employs password hashing (e.g. bcrypt), secure secret key management, token expiration strategies, and safe storage of refresh tokens to mitigate common security vulnerabilities",
-      "<strong>Stateless Access & Controlled Refresh :</strong> Access tokens are short-lived and stateless, while refresh tokens allow controlled renewal. This balances user experience with security",
-      "<strong>Clear Error Handling & Response Standardization :</strong> Implements consistent error codes, HTTP status semantics (401, 403, 400), and structured JSON responses making it easy for API clients to integrate and respond to auth states",
-      "<strong>Extensible & Integratable Architecture :</strong> Designed to be dropped into any backend stack, with modular token logic, middleware integration, and easy hooks for role-based claims or scope-based access control"
+    title: "Reading Time & Word Count Plugin (WordPress)",
+    description: "Lightweight WordPress plugin that automatically calculates and displays reading time and word count with modern styles and flexible placement options.",
+    points: [
+      "Supports multiple display styles, customization options, and responsive layouts including dark mode",
+      "Works seamlessly via automatic insertion, shortcode, widget, or template tag",
+      "Built with WordPress best practices including sanitization, nonce verification, and coding standards"
     ],
-    tech: ["Spring Boot", "Spring Security", "JWT", "BCrypt", "Java Mail", "MySQL", "Maven", "Java"],
-    image: "/data/images/projects/jwt-auth-api.png",
-    github: "https://github.com/AjayKumbham/jwt-auth-api",
-    hasLiveDemo: false
+    tech: ["WordPress", "PHP", "JavaScript", "Docker"],
+    github: "https://github.com/AjayKumbham/wp-reading-time-word-count"
+  },
+  {
+    id: 8,
+    title: "Developer Blogging Platform",
+    description: "Full-stack blogging platform built for developers to publish technical content with rich editing, search, and newsletter features, backed by a real-time cloud database.",
+    points: [
+      "Advanced blog browsing with search, tag filtering, syntax highlighting, and reading time estimation",
+      "Secure admin panel for managing posts, uploads, site settings, and subscribers",
+      "Integrated authentication, cloud storage, and email notifications for a complete publishing workflow"
+    ],
+    tech: ["React", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
+    github: "https://github.com/AjayKumbham/personal-blog-platform",
+    live: "https://blog-ajaykumbham.vercel.app/"
+  },
+  {
+    id: 9,
+    title: "Clerk Auth System (React)",
+    description: "Modern authentication foundation built with React and Clerk, providing secure user onboarding, session management, and account controls out of the box.",
+    points: [
+      "Supports complete auth flows including sign up, sign in, password recovery, and email verification",
+      "Includes user dashboard, profile management, and security settings interfaces",
+      "Built with a production-ready frontend stack and responsive UI components"
+    ],
+    tech: ["React", "TypeScript", "Vite", "Clerk"],
+    github: "https://github.com/AjayKumbham/clerk-auth-system",
+    live: "https://secure-auth-service.vercel.app/"
+  },
+  {
+    id: 10,
+    title: "JWT Authentication API",
+    description: "Secure authentication backend using JWT with HTTP-only cookies and role-based access control. Designed as a production-style auth system with email notifications and strong security practices.",
+    points: [
+      "Uses HTTP-only cookies for token storage to protect against XSS and avoid client-side token handling",
+      "Supports user registration, login, logout, and role-based access for USER and ADMIN",
+      "Sends a welcome email on signup and stores passwords securely using BCrypt"
+    ],
+    tech: ["Spring Boot", "Spring Security", "JWT", "MySQL", "Java Mail"],
+    github: "https://github.com/AjayKumbham/jwt-auth-api"
   }
 ];
