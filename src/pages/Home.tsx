@@ -239,7 +239,7 @@ const Home: React.FC = () => {
             Explore technical articles, tutorials, and insights on software development, cloud computing, and emerging technologies.
           </p>
           <a
-            href="https://blog-ajaykumbham.vercel.app/"
+            href="https://ajaykumbham-blog.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"

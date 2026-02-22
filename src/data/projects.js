@@ -96,7 +96,7 @@ export const projectsData = [
     ],
     tech: ["React", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS"],
     github: "https://github.com/AjayKumbham/personal-blog-platform",
-    live: "https://blog-ajaykumbham.vercel.app/"
+    live: "https://ajaykumbham-blog.vercel.app/"
   },
   {
     id: 9,
