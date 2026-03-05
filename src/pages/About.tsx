@@ -4,7 +4,7 @@ import { aboutData } from '../data/about';
 import { personalInfo } from '../data/personal';
 import { educationData } from '../data/education';
 import { resumeData } from '../data/resume';
-import { X, Download, Eye, GraduationCap, Calendar, Award } from 'lucide-react';
+import { X, Download, Eye, GraduationCap, Calendar, TrendingUp, FileText } from 'lucide-react';
 
 const About: React.FC = () => {
   const [showResumeModal, setShowResumeModal] = useState(false);
@@ -21,17 +21,19 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             {aboutData.intro}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        {/* Profile + Description */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           {/* Image */}
           <div className="order-2 lg:order-1">
             <div className="relative">
@@ -45,7 +47,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Content */}
-          <div className="order-1 lg:order-2 space-y-6">
+          <div className="order-1 lg:order-2 space-y-8">
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               {aboutData.description}
             </p>
@@ -65,10 +67,13 @@ const About: React.FC = () => {
         </div>
 
         {/* Passions */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            What I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Passionate</span> About
-          </h2>
+        <div className="mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+              What I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Passionate</span> About
+            </h2>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {aboutData.passions.map((passion, index) => (
@@ -87,93 +92,130 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Education Section */}
-        <div className="mb-20">
+        {/* Academic Journey */}
+        <div className="mb-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
               Academic <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Journey</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              My educational background and academic achievements
-            </p>
+            <p className="text-gray-600 dark:text-gray-400 text-base mt-2">Education & Achievements</p>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
           </div>
 
-          <div className="space-y-6">
-            {educationData.map((edu) => (
-              <div
-                key={edu.id}
-                className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden"
-              >
-                <div className="p-6 md:p-8">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <GraduationCap className="w-6 h-6 text-white" />
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-transparent transform md:-translate-x-px hidden md:block"></div>
+
+            <div className="space-y-8">
+              {educationData.map((edu, index) => (
+                <div
+                  key={edu.id}
+                  className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                >
+                  {/* Content Card */}
+                  <div className="flex-1">
+                    <div className="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+                      {/* Top row */}
+                      <div className="flex items-start justify-between gap-4 mb-4">
+                        <div className="flex items-center gap-3">
+                          <div className="p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex-shrink-0">
+                            <GraduationCap className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
+                              {edu.qualification}
+                            </h3>
+                            <p className="text-blue-600 dark:text-blue-400 text-base font-medium mt-0.5">
+                              {edu.institution}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Score Badge */}
+                        <div className="flex-shrink-0">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold rounded-full whitespace-nowrap">
+                            <TrendingUp className="w-3 h-3" />
+                            {edu.result}
+                          </span>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                          {edu.qualification}
-                        </h3>
-                        <p className="text-blue-600 dark:text-blue-400 font-semibold">
-                          {edu.institution}
-                        </p>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+
+                      {/* Bottom row */}
+                      <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
                           {edu.university}
                         </p>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col items-start md:items-end gap-2">
-                      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                        <Calendar className="w-4 h-4" />
-                        <span className="text-sm font-medium">{edu.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Award className="w-5 h-5 text-yellow-500" />
-                        <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                          {edu.result}
-                        </span>
+                        <div className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
+                          <Calendar className="w-3.5 h-3.5" />
+                          <span>{edu.duration}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
+
+                  {/* Timeline dot – center (md) */}
+                  <div className="hidden md:flex items-start justify-center w-12 flex-shrink-0 pt-5">
+                    <div className="w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 border-2 border-white dark:border-gray-900 shadow-md ring-2 ring-blue-500/30"></div>
+                  </div>
+
+                  {/* Empty half for alternating layout */}
+                  <div className="flex-1 hidden md:block"></div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Resume Section */}
-        <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-8 md:p-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              📄 My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Resume</span>
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-              Download my comprehensive resume or preview it below to learn more about my background and experience
-            </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Last updated: {resumeData.lastUpdated}
-            </p>
-          </div>
+        <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700">
+          {/* Background accent */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-500/10 to-transparent rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              onClick={handleDownload}
-              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25"
-            >
-              <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              Download PDF
-            </button>
+          <div className="relative flex flex-col md:flex-row items-center gap-8 p-8 md:p-12">
+            {/* Icon block */}
+            <div className="flex-shrink-0">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+                <FileText className="w-9 h-9 text-white" />
+              </div>
+            </div>
 
-            <button
-              onClick={() => setShowResumeModal(true)}
-              className="group inline-flex items-center px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-900 dark:border-white rounded-full font-semibold hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300 hover:scale-105"
-            >
-              <Eye className="w-5 h-5 mr-2" />
-              Preview Resume
-            </button>
+            {/* Text */}
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                My Resume
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed max-w-lg">
+                Download my resume or preview it directly to learn more about my background, experience, and skills.
+              </p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                Last updated: {resumeData.lastUpdated}
+              </p>
+            </div>
+
+            {/* Actions */}
+            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+              <button
+                onClick={handleDownload}
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5"
+              >
+                <Download className="w-4 h-4 group-hover:animate-bounce" />
+                Download PDF
+              </button>
+
+              <button
+                onClick={() => setShowResumeModal(true)}
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-lg font-semibold text-sm hover:border-blue-500 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <Eye className="w-4 h-4" />
+                Preview
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
 
       {/* Resume Preview Modal */}
@@ -181,29 +223,34 @@ const About: React.FC = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="relative w-full max-w-5xl max-h-[90vh] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in duration-300">
             {/* Modal Header */}
-            <div className="sticky top-0 z-10 flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-              <h3 className="text-xl font-bold">Resume Preview</h3>
+            <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                  <FileText className="w-4 h-4 text-white" />
+                </div>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white">Resume Preview</h3>
+              </div>
+              <div className="flex items-center gap-2">
                 <button
                   onClick={handleDownload}
-                  className="inline-flex items-center px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-medium transition-all duration-200"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-all duration-200"
                 >
-                  <Download className="w-4 h-4 mr-2" />
+                  <Download className="w-4 h-4" />
                   Download
                 </button>
                 <button
                   onClick={() => setShowResumeModal(false)}
-                  className="p-2 hover:bg-white/20 rounded-lg transition-all duration-200"
+                  className="p-2 text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all duration-200"
                   aria-label="Close modal"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-5 h-5" />
                 </button>
               </div>
             </div>
 
             {/* Modal Content */}
-            <div className="overflow-y-auto max-h-[calc(90vh-80px)] bg-gray-100 dark:bg-gray-800 p-4">
-              <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+            <div className="overflow-y-auto max-h-[calc(90vh-73px)] bg-gray-50 dark:bg-gray-800 p-4">
+              <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden">
                 <img
                   src={resumeData.previewImage}
                   alt="Resume Preview"
@@ -215,26 +262,24 @@ const About: React.FC = () => {
                     if (fallback) fallback.style.display = 'flex';
                   }}
                 />
-                <div className="hidden flex-col items-center justify-center p-12 text-center bg-gray-100 dark:bg-gray-800 min-h-[400px]">
-                  <div className="text-gray-500 dark:text-gray-400 mb-4">
-                    <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
+                <div className="hidden flex-col items-center justify-center p-12 text-center bg-gray-50 dark:bg-gray-800 min-h-[400px]">
+                  <div className="w-16 h-16 rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-4">
+                    <FileText className="w-8 h-8 text-gray-400 dark:text-gray-500" />
                   </div>
-                  <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Resume Preview Image Not Found
+                  <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                    Resume Preview Unavailable
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    Please add your resume preview image at:
+                    Add your preview image at:
                   </p>
-                  <code className="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded text-xs">
+                  <code className="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-4 py-2 rounded-lg text-xs font-mono">
                     {resumeData.previewImage}
                   </code>
                   <button
                     onClick={handleDownload}
-                    className="mt-6 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+                    className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
                   >
-                    <Download className="w-4 h-4 mr-2" />
+                    <Download className="w-4 h-4" />
                     Download PDF Instead
                   </button>
                 </div>
