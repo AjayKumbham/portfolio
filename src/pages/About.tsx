@@ -249,32 +249,19 @@ const About: React.FC = () => {
             </div>
 
             {/* Modal Content */}
-            <div className="overflow-y-auto max-h-[calc(90vh-73px)] bg-gray-50 dark:bg-gray-800 p-4">
-              <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden">
-                <img
-                  src={resumeData.previewImage}
-                  alt="Resume Preview"
-                  className="w-full h-auto"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    const fallback = target.nextElementSibling as HTMLElement;
-                    if (fallback) fallback.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden flex-col items-center justify-center p-12 text-center bg-gray-50 dark:bg-gray-800 min-h-[400px]">
+            <div className="flex-1 bg-gray-50 dark:bg-gray-800 h-[calc(90vh-73px)]">
+              <iframe
+                src={`${resumeData.pdfPath}#toolbar=0&navpanes=0`}
+                className="w-full h-full border-none"
+                title="Resume PDF Viewer"
+              >
+                <div className="flex flex-col items-center justify-center p-12 text-center h-full">
                   <div className="w-16 h-16 rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-4">
                     <FileText className="w-8 h-8 text-gray-400 dark:text-gray-500" />
                   </div>
                   <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                    Resume Preview Unavailable
+                    Your browser doesn't support embedded PDFs
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    Add your preview image at:
-                  </p>
-                  <code className="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-4 py-2 rounded-lg text-xs font-mono">
-                    {resumeData.previewImage}
-                  </code>
                   <button
                     onClick={handleDownload}
                     className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
@@ -283,7 +270,7 @@ const About: React.FC = () => {
                     Download PDF Instead
                   </button>
                 </div>
-              </div>
+              </iframe>
             </div>
           </div>
         </div>
