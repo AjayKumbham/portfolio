@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               </h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Final-year Computer Science student specializing in building production-ready software applications and contributing to real-world engineering projects.
+              Computer Science Undergraduate specializing in building production-ready software applications and contributing to real-world engineering projects.
             </p>
           </div>
 
