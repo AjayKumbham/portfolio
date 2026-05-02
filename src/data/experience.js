@@ -1,5 +1,21 @@
 export const experienceData = [
   {
+    id: 4,
+    company: "HackerRank",
+    role: "Spring Boot Subject Matter Expert (SME)",
+    type: "Contract",
+    duration: "Apr 2026 – Present",
+    location: "Remote",
+    hasCertificate: false,
+    certificateUrl: null,
+    technologies: ["Spring Boot", "Java"],
+    responsibilities: [
+      "Created and validated Spring Boot-based coding problems focusing on real-world backend scenarios",
+      "Reviewed and benchmarked candidate solutions for correctness, performance, and scalability",
+      "Designed test cases and evaluation criteria to ensure robust and fair assessment standards"
+    ]
+  },
+  {
     id: 1,
     company: "TheSmartBridge",
     role: "ServiceNow Developer Intern",
@@ -12,21 +28,6 @@ export const experienceData = [
     responsibilities: [
       "Completed ServiceNow Virtual Internship Program in collaboration with ServiceNow University, covering platform administration fundamentals, workflow automation, and automated testing framework (ATF) essentials",
       "Gained hands-on experience in ServiceNow platform configuration, building automated workflows, creating actionable reports, and exploring Agentic AI capabilities aligned with enterprise IT service management practices"
-    ]
-  },
-  {
-    id: 2,
-    company: "National Institute of Electronics and Information Technology (NIELIT)",
-    role: "AI/ML Intern",
-    type: "Internship",
-    duration: "Aug 2024 – Oct 2024",
-    location: "Remote",
-    hasCertificate: false,
-    certificateUrl: null,
-    technologies: ["Python", "NumPy", "pandas", "scikit-learn", "matplotlib"],
-    responsibilities: [
-      "Completed an 8-week internship covering core AI/ML concepts, algorithms through hands-on projects built using Python libraries (NumPy, pandas, scikit-learn, and matplotlib)",
-      "Built ML models for prediction and analysis tasks, applying training, evaluation, and optimization techniques to real-world datasets."
     ]
   },
   {
