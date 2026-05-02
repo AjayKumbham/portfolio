@@ -1,5 +1,29 @@
 export const projectsData = [
   {
+    id: 12,
+    title: "Multi-Domain Support Triage System",
+    description: "Terminal-based AI agent that automates support ticket triage across enterprise domains using Retrieval-Augmented Generation and the Groq API.",
+    points: [
+      "Implements a hybrid retrieval system combining BM25 exact keyword matching with dense semantic search and Reciprocal Rank Fusion",
+      "Architects a multi-stage pipeline with a rule-based decision router to catch prompt injections and security threats before LLM processing",
+      "Optimizes inference performance utilizing intelligent embedding caching and automated fallback mechanisms for API resilience"
+    ],
+    tech: ["Python", "Groq API", "Sentence Transformers", "BM25", "Llama 3"],
+    github: "https://github.com/AjayKumbham/multi-domain-support-triage-agent"
+  },
+  {
+    id: 11,
+    title: "Observable Microservices E-Commerce Backend",
+    description: "Production-style e-commerce system built around seven independently deployable microservices, communicating through a central API gateway to handle scalable and resilient backend operations.",
+    points: [
+      "Orchestrates a robust checkout saga combining synchronous payment processing with asynchronous Kafka-driven notifications",
+      "Implements a database-per-service architecture using PostgreSQL to ensure isolated bounded contexts and independent scalability",
+      "Secures cross-service communication using centralized JWT validation at the Spring Cloud Gateway with trusted downstream headers"
+    ],
+    tech: ["Spring Boot", "Spring Cloud", "Kafka", "PostgreSQL", "Redis", "Docker"],
+    github: "https://github.com/AjayKumbham/observable-microservices-ecommerce"
+  },
+  {
     id: 1,
     title: "Distributed Data Fan-Out Engine",
     description: "High-throughput data distribution engine that streams records from flat files and delivers them to multiple downstream systems simultaneously with built-in resilience and observability.",
