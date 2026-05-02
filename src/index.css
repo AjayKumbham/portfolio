@@ -101,3 +101,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Fix for FastBots chat widget icon centering */
+#chat-widget-push-to-talk {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#chat-widget-push-to-talk svg,
+#chat-widget-push-to-talk img {
+  display: block !important;
+  margin: auto !important;
+  position: static !important;
+}
