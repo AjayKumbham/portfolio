@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 import { personalInfo } from '../data/personal';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,118 +19,164 @@ const Navigation: React.FC = () => {
     { name: 'Experience', path: '/experience' },
     { name: 'Certifications', path: '/certifications' },
     { name: 'Achievements', path: '/achievements' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-
-      // Calculate scroll progress
-      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (window.scrollY / windowHeight) * 100;
-      setScrollProgress(scrolled);
+      const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      setScrollProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
+  // Close menu on navigation
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled
-      ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-gray-700/20'
-      : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm'
-      }`}>
-      {/* Scroll Progress Bar */}
-      <div className="absolute top-0 left-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-150 ease-out" style={{ width: `${scrollProgress}%` }}></div>
+    <>
+      {/* ── Main navbar bar ── */}
+      <nav
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? 'bg-background/90 backdrop-blur-xl shadow-md border-b border-border/50'
+            : 'bg-background/40 backdrop-blur-md border-b border-border/10'
+        }`}
+      >
+        {/* Scroll progress indicator */}
+        <div
+          className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-primary via-blue-500 to-purple-500 transition-all duration-150"
+          style={{ width: `${scrollProgress}%` }}
+        />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link
-            to="/"
-            className="flex items-center space-x-3 text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
-          >
-            <img
-              src="/personal-logo.jpg"
-              alt="Ajay Kumbham Logo"
-              className="w-[1.875rem] h-[1.875rem] rounded-full object-cover border-2 border-blue-600 shadow-sm transform translate-y-[0.5px]"
-            />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`flex items-center justify-between gap-4 transition-all duration-500 ${scrolled ? 'h-14' : 'h-16'}`}>
 
-            <span>{personalInfo.name}</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${location.pathname === item.path
-                  ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                  }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <button
-              onClick={toggleTheme}
-              className="ml-4 p-2.5 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:scale-105"
-              aria-label="Toggle theme"
-            >
-              {isDark ? (
-                <Sun className="w-4 h-4 text-yellow-500" />
-              ) : (
-                <Moon className="w-4 h-4 text-gray-600" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center space-x-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2.5 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 border border-gray-200 dark:border-gray-700"
-              aria-label="Toggle theme"
-            >
-              {isDark ? (
-                <Sun className="w-4 h-4 text-yellow-500" />
-              ) : (
-                <Moon className="w-4 h-4 text-gray-600" />
-              )}
-            </button>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
-            >
-              <div className="w-6 h-6 flex flex-col justify-center items-center">
-                <span className={`bg-gray-600 dark:bg-gray-300 block transition-all duration-300 h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                <span className={`bg-gray-600 dark:bg-gray-300 block transition-all duration-300 h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`bg-gray-600 dark:bg-gray-300 block transition-all duration-300 h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      <div className={`lg:hidden transition-all duration-300 ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} overflow-hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200/20 dark:border-gray-700/20`}>
-        <div className="px-4 pt-2 pb-3 space-y-1">
-          {navItems.map((item) => (
+            {/* ── Logo ── */}
             <Link
-              key={item.path}
-              to={item.path}
-              onClick={() => setIsOpen(false)}
-              className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${location.pathname === item.path
-                ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                }`}
+              to="/"
+              className="group flex items-center gap-2 min-w-0"
+              aria-label="Home"
             >
-              {item.name}
+              <div className="w-9 h-9 flex-shrink-0 rounded-xl overflow-hidden border border-border group-hover:border-primary/50 transition-colors duration-300 shadow-sm">
+                <img
+                  src="/personal-logo.jpg"
+                  alt="Logo"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <span className="font-heading font-bold text-lg lg:text-xl tracking-tight text-foreground group-hover:text-primary transition-colors duration-300 truncate">
+                {personalInfo.name}
+              </span>
             </Link>
-          ))}
+
+            {/* ── Desktop nav links (xl+) ── */}
+            <div className="hidden xl:flex items-center justify-center flex-1">
+              <div className="flex items-center gap-0.5 p-1 bg-secondary/50 border border-border/50 rounded-full backdrop-blur-sm shadow-sm">
+                {navItems.map((item) => {
+                  const active = location.pathname === item.path;
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`relative inline-flex items-center justify-center px-3 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-200 ${
+                        active
+                          ? 'text-primary-foreground'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-foreground/5'
+                      }`}
+                    >
+                      {active && (
+                        <span className="absolute inset-0 bg-primary rounded-full -z-10 shadow" />
+                      )}
+                      {item.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* ── Right‑side actions ── */}
+            <div className="flex items-center gap-2 flex-shrink-0">
+              {/* Theme toggle */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full bg-secondary border border-border text-secondary-foreground hover:bg-secondary/80 transition-all duration-300 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-sm"
+                aria-label="Toggle theme"
+              >
+                {isDark
+                  ? <Sun className="w-4 h-4 text-yellow-500" />
+                  : <Moon className="w-4 h-4 text-primary" />}
+              </button>
+
+              {/* Hamburger — visible below xl */}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="xl:hidden p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label={isOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={isOpen}
+              >
+                {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+      {/* ── Mobile drawer overlay ── */}
+      <div
+        className={`fixed inset-0 z-40 xl:hidden transition-all duration-500 ease-out ${
+          isOpen
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        {/* Backdrop */}
+        <div
+          className="absolute inset-0 bg-background/95 backdrop-blur-2xl"
+          onClick={() => setIsOpen(false)}
+        />
+
+        {/* Drawer panel */}
+        <div
+          className={`relative flex flex-col h-full pt-20 pb-10 px-6 sm:px-10 overflow-y-auto transition-transform duration-500 ease-out ${
+            isOpen ? 'translate-y-0' : '-translate-y-8'
+          }`}
+        >
+          <nav className="flex flex-col gap-1 mt-4">
+            {navItems.map((item, index) => {
+              const active = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  style={{ transitionDelay: isOpen ? `${index * 40}ms` : '0ms' }}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-2xl text-xl font-heading font-bold transition-all duration-400 ${
+                    isOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
+                  } ${
+                    active
+                      ? 'bg-primary/10 text-primary border-l-4 border-primary'
+                      : 'text-foreground hover:bg-secondary hover:text-primary border-l-4 border-transparent hover:border-border'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+          </nav>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 
