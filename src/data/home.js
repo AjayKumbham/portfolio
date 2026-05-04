@@ -3,6 +3,7 @@ export const homeData = {
   title: "Software Developer",
   tagline: "Computer Science Undergraduate specializing in building production-ready software applications and contributing to real-world engineering projects.",
   profileImage: "/personal-logo.jpg", // Local path to your profile image
+  isAvailableForOpportunities: true,
   stats: {
     nptelAchievements: "2x",
     nptelDescription: "NPTEL Top 1%",
