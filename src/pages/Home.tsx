@@ -113,14 +113,14 @@ const Home: React.FC = () => {
       {/* Featured Projects Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
                 Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400">Check out some of my recent work</p>
             </div>
-            <Link to="/projects" className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:gap-3 transition-all font-medium">
+            <Link to="/projects" className="self-start sm:self-auto flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:gap-3 transition-all font-medium whitespace-nowrap">
               View All <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -172,14 +172,14 @@ const Home: React.FC = () => {
       {/* Achievements Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
                 Top <span className="bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">Achievements</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400">Recognition and milestones</p>
             </div>
-            <Link to="/achievements" className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:gap-3 transition-all font-medium">
+            <Link to="/achievements" className="self-start sm:self-auto flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:gap-3 transition-all font-medium whitespace-nowrap">
               View All <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -204,14 +204,14 @@ const Home: React.FC = () => {
       {/* Certifications Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
                 Latest <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Certifications</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400">Professional credentials and learning</p>
             </div>
-            <Link to="/certifications" className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:gap-3 transition-all font-medium">
+            <Link to="/certifications" className="self-start sm:self-auto flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:gap-3 transition-all font-medium whitespace-nowrap">
               View All <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
