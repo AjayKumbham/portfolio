@@ -10,7 +10,7 @@ import { ArrowRight, Award, ExternalLink, BookOpen } from 'lucide-react';
 
 const Home: React.FC = () => {
   // Select specific featured projects by ID
-  const featuredProjectIds = [4, 11, 1];
+  const featuredProjectIds = [1, 2, 5];
   const featuredProjects = featuredProjectIds
     .map(id => projectsData.find(p => p.id === id))
     .filter(Boolean);
@@ -18,25 +18,9 @@ const Home: React.FC = () => {
   const topAchievements = achievementsData.slice(0, 2);
   const topCertifications = certificationsData.slice(0, 3);
 
-  // Function to get the most important technologies for each project
-  const getImportantTech = (projectTitle: string, techArray: string[]) => {
-    // Specific tech stacks for certain projects
-    const specificMappings: { [key: string]: string[] } = {
-      'Healthcare Services & Pharmacy Platform': ['React', 'SpringBoot', 'MySQL', 'JWT'],
-      'Developer Blogging Platform': ['React', 'TailwindCSS', 'TypeScript', 'Supabase'],
-      'Evernorth Backend API (Healthcare)': ['Spring Boot', 'JWT', 'Redis', 'MySQL']
-    };
-
-    // Check if project has specific mapping
-    if (specificMappings[projectTitle]) {
-      return specificMappings[projectTitle];
-    }
-
-    // Default: prioritize main frameworks/languages
-    const priority = ['React', 'TypeScript', 'JavaScript', 'Java', 'Spring Boot', 'SpringBoot', 'Node.js', 'Python', 'Next.js', 'Vue', 'Angular', 'TailwindCSS', 'Supabase', 'MySQL', 'PostgreSQL', 'Redis', 'JWT', 'Apache Avro', 'Protocol Buffers', 'Kafka'];
-    const important = techArray.filter(tech => priority.some(p => tech.includes(p)));
-    const remaining = techArray.filter(tech => !priority.some(p => tech.includes(p)));
-    return [...important, ...remaining].slice(0, 4);
+  // Function to get all technologies for each project
+  const getAllTech = (projectTitle: string, techArray: string[]) => {
+    return techArray;
   };
 
   return (
@@ -67,9 +51,7 @@ const Home: React.FC = () => {
                     {homeData.name}
                   </span>
                 </h1>
-                <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light">
-                  {homeData.title}
-                </p>
+
                 <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0">
                   {homeData.tagline}
                 </p>
@@ -148,11 +130,11 @@ const Home: React.FC = () => {
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 line-clamp-4 leading-relaxed">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-8">
-                      {getImportantTech(project.title, project.tech || []).map((tech: string, i: number) => (
+                      {getAllTech(project.title, project.tech || []).map((tech: string, i: number) => (
                         <span key={i} className="text-[11px] px-3 py-1 bg-gray-100 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 rounded-full font-medium shadow-sm">
                           {tech}
                         </span>

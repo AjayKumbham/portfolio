@@ -1,18 +1,6 @@
 export const projectsData = [
   {
-    id: 12,
-    title: "Multi-Domain Support Triage System",
-    description: "Terminal-based AI agent that automates support ticket triage across enterprise domains using Retrieval-Augmented Generation and the Groq API.",
-    points: [
-      "Implements a hybrid retrieval system combining BM25 exact keyword matching with dense semantic search and Reciprocal Rank Fusion",
-      "Architects a multi-stage pipeline with a rule-based decision router to catch prompt injections and security threats before LLM processing",
-      "Optimizes inference performance utilizing intelligent embedding caching and automated fallback mechanisms for API resilience"
-    ],
-    tech: ["Python", "Groq API", "Sentence Transformers", "BM25", "Llama 3"],
-    github: "https://github.com/AjayKumbham/multi-domain-support-triage-agent"
-  },
-  {
-    id: 11,
+    id: 1,
     title: "Observable Microservices E-Commerce Backend",
     description: "Production-style e-commerce system built around seven independently deployable microservices, communicating through a central API gateway to handle scalable and resilient backend operations.",
     points: [
@@ -24,7 +12,19 @@ export const projectsData = [
     github: "https://github.com/AjayKumbham/observable-microservices-ecommerce"
   },
   {
-    id: 1,
+    id: 2,
+    title: "Multi-Domain Support Triage Agent",
+    description: "Terminal-based AI support triage system that classifies, routes, and safely responds to enterprise support tickets using hybrid retrieval and LLM-driven reasoning across multiple service domains.",
+    points: [
+      "Implements a multi-stage AI pipeline with safety routing, hybrid retrieval, structured generation, and confidence-based postprocessing",
+      "Combines BM25 keyword search, dense semantic retrieval, and Reciprocal Rank Fusion to generate grounded responses from domain-specific support corpora",
+      "Detects prompt injections, malicious requests, outage signals, and unsupported cases with automated escalation workflows"
+    ],
+    tech: ["Python", "Groq API", "Sentence Transformers", "BM25", "Llama 3"],
+    github: "https://github.com/AjayKumbham/multi-domain-support-triage-agent"
+  },
+  {
+    id: 3,
     title: "Distributed Data Fan-Out Engine",
     description: "High-throughput data distribution engine that streams records from flat files and delivers them to multiple downstream systems simultaneously with built-in resilience and observability.",
     points: [
@@ -36,7 +36,7 @@ export const projectsData = [
     github: "https://github.com/AjayKumbham/distributed-data-fanout-engine"
   },
   {
-    id: 2,
+    id: 4,
     title: "Durable Execution Engine",
     description: "Fault-tolerant workflow engine for Java that can resume long-running processes exactly where they stopped after crashes or restarts, without repeating completed steps.",
     points: [
@@ -48,19 +48,19 @@ export const projectsData = [
     github: "https://github.com/AjayKumbham/native-durable-execution-engine"
   },
   {
-    id: 3,
-    title: "Local AI Assistant",
-    description: "Production-grade chat interface for running large language models locally, enabling private AI conversations with real-time streaming responses.",
+    id: 5,
+    title: "Healthcare Operational Intelligence Platform",
+    description: "Operational intelligence platform for healthcare environments with real-time analytics and automated orchestration to optimize patient flow, resource allocation, and workforce management.",
     points: [
-      "Supports multi-turn conversations with session management and model switching",
-      "Streams responses token-by-token for a real-time chat experience",
-      "Connects a modern React interface to local LLMs via FastAPI backend"
+      "Implements dynamic patient queueing with severity-based prioritization and automated background jobs recalculating wait times every minute",
+      "Tracks live bed occupancy, monitors inventory levels, and coordinates staff allocation across high-priority departments during surge events",
+      "Simulates operational scenarios such as equipment failures and supply shortages while delivering proactive alerts and forecasting dashboards"
     ],
-    tech: ["React", "TypeScript", "FastAPI", "Ollama", "MongoDB"],
-    github: "https://github.com/AjayKumbham/private-local-ai-companion"
+    tech: ["React", "TypeScript", "Supabase", "TanStack Query", "Tailwind CSS", "Zod"],
+    github: "https://github.com/AjayKumbham/astrum-healthcare"
   },
   {
-    id: 4,
+    id: 6,
     title: "Healthcare Services & Pharmacy Platform",
     description: "Full-stack healthcare platform designed to manage pharmacy operations, prescriptions, and patient services in one unified system with role-based access and modern user experience.",
     points: [
@@ -73,19 +73,7 @@ export const projectsData = [
     live: "https://ajaykumbham.github.io/healthcare-services-and-pharmacy-docs/"
   },
   {
-    id: 5,
-    title: "Zoomify (Video Conferencing App)",
-    description: "Full-featured video conferencing application enabling real-time meetings with video, audio, chat, and collaboration tools directly in the browser.",
-    points: [
-      "Supports HD video calls, screen sharing, chat, and virtual collaboration features like whiteboard",
-      "Built on WebRTC for peer-to-peer communication with Socket.io for signaling and real-time updates",
-      "Includes meeting controls such as passwords, waiting rooms, recording, and participant management"
-    ],
-    tech: ["React", "Node.js", "Express", "MongoDB", "WebRTC", "Socket.io"],
-    github: "https://github.com/AjayKumbham/zoomify"
-  },
-  {
-    id: 6,
+    id: 7,
     title: "Evernorth Backend API (Healthcare)",
     description: "Industry-style backend API built from a real-time case study, simulating a secure and scalable enterprise system with authentication, profile management, payments, and health records.",
     points: [
@@ -98,19 +86,31 @@ export const projectsData = [
     live: "https://ajaykumbham.github.io/backend-api-docs/"
   },
   {
-    id: 7,
-    title: "Reading Time & Word Count Plugin (WordPress)",
-    description: "Lightweight WordPress plugin that automatically calculates and displays reading time and word count with modern styles and flexible placement options.",
+    id: 8,
+    title: "Zoomify (Video Conferencing App)",
+    description: "Full-featured video conferencing application enabling real-time meetings with video, audio, chat, and collaboration tools directly in the browser.",
     points: [
-      "Supports multiple display styles, customization options, and responsive layouts including dark mode",
-      "Works seamlessly via automatic insertion, shortcode, widget, or template tag",
-      "Built with WordPress best practices including sanitization, nonce verification, and coding standards"
+      "Supports HD video calls, screen sharing, chat, and virtual collaboration features like whiteboard",
+      "Built on WebRTC for peer-to-peer communication with Socket.io for signaling and real-time updates",
+      "Includes meeting controls such as passwords, waiting rooms, recording, and participant management"
     ],
-    tech: ["WordPress", "PHP", "JavaScript", "Docker"],
-    github: "https://github.com/AjayKumbham/wp-reading-time-word-count"
+    tech: ["React", "Node.js", "Express", "MongoDB", "WebRTC", "Socket.io"],
+    github: "https://github.com/AjayKumbham/zoomify"
   },
   {
-    id: 8,
+    id: 9,
+    title: "Local AI Assistant",
+    description: "Production-grade chat interface for running large language models locally, enabling private AI conversations with real-time streaming responses.",
+    points: [
+      "Supports multi-turn conversations with session management and model switching",
+      "Streams responses token-by-token for a real-time chat experience",
+      "Connects a modern React interface to local LLMs via FastAPI backend"
+    ],
+    tech: ["React", "TypeScript", "FastAPI", "Ollama", "MongoDB"],
+    github: "https://github.com/AjayKumbham/private-local-ai-companion"
+  },
+  {
+    id: 10,
     title: "Developer Blogging Platform",
     description: "Full-stack blogging platform built for developers to publish technical content with rich editing, search, and newsletter features, backed by a real-time cloud database.",
     points: [
@@ -123,7 +123,19 @@ export const projectsData = [
     live: "https://ajaykumbham-blog.vercel.app/"
   },
   {
-    id: 9,
+    id: 11,
+    title: "JWT Authentication API",
+    description: "Secure authentication backend using JWT with HTTP-only cookies and role-based access control. Designed as a production-style auth system with email notifications and strong security practices.",
+    points: [
+      "Uses HTTP-only cookies for token storage to protect against XSS and avoid client-side token handling",
+      "Supports user registration, login, logout, and role-based access for USER and ADMIN",
+      "Sends a welcome email on signup and stores passwords securely using BCrypt"
+    ],
+    tech: ["Spring Boot", "Spring Security", "JWT", "MySQL", "Java Mail"],
+    github: "https://github.com/AjayKumbham/jwt-auth-api"
+  },
+  {
+    id: 12,
     title: "Clerk Auth System (React)",
     description: "Modern authentication foundation built with React and Clerk, providing secure user onboarding, session management, and account controls out of the box.",
     points: [
@@ -136,15 +148,15 @@ export const projectsData = [
     live: "https://secure-auth-service.vercel.app/"
   },
   {
-    id: 10,
-    title: "JWT Authentication API",
-    description: "Secure authentication backend using JWT with HTTP-only cookies and role-based access control. Designed as a production-style auth system with email notifications and strong security practices.",
+    id: 13,
+    title: "Reading Time & Word Count Plugin (WordPress)",
+    description: "Lightweight WordPress plugin that automatically calculates and displays reading time and word count with modern styles and flexible placement options.",
     points: [
-      "Uses HTTP-only cookies for token storage to protect against XSS and avoid client-side token handling",
-      "Supports user registration, login, logout, and role-based access for USER and ADMIN",
-      "Sends a welcome email on signup and stores passwords securely using BCrypt"
+      "Supports multiple display styles, customization options, and responsive layouts including dark mode",
+      "Works seamlessly via automatic insertion, shortcode, widget, or template tag",
+      "Built with WordPress best practices including sanitization, nonce verification, and coding standards"
     ],
-    tech: ["Spring Boot", "Spring Security", "JWT", "MySQL", "Java Mail"],
-    github: "https://github.com/AjayKumbham/jwt-auth-api"
+    tech: ["WordPress", "PHP", "JavaScript", "Docker"],
+    github: "https://github.com/AjayKumbham/wp-reading-time-word-count"
   }
 ];
