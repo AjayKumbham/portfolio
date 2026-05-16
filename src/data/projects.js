@@ -50,7 +50,7 @@ export const projectsData = [
   {
     id: 5,
     title: "Healthcare Operational Intelligence Platform",
-    description: "Operational intelligence platform for healthcare environments with real-time analytics and automated orchestration to optimize patient flow, resource allocation, and workforce management.",
+    description: "Operational intelligence platform for healthcare environments that optimizes patient flow, resource allocation, inventory and workforce management through real-time analytics and automated orchestration.",
     points: [
       "Implements dynamic patient queueing with severity-based prioritization and automated background jobs recalculating wait times every minute",
       "Tracks live bed occupancy, monitors inventory levels, and coordinates staff allocation across high-priority departments during surge events",
