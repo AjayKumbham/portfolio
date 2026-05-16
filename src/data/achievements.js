@@ -23,11 +23,11 @@ export const achievementsData = [
   },
   {
     id: 3,
-    title: "Secured AIR 6600 in GATE 2025, Computer Science",
-    institution: "IIT Roorkee",
-    date: "Feb 2025",
-    rank: "AIR 6600",
-    performance: "Ranked among 1.7 lakh+ candidates in one of India's most competitive engineering exams.",
+    title: "Secured AIR 5075 in GATE 2026, Computer Science",
+    institution: "IIT Guwahati",
+    date: "Feb 2026",
+    rank: "AIR 5075 (Top 2.5% nationally)",
+    performance: "Ranked among 2.11 lakh+ candidates in one of India's most competitive engineering exams.",
     icon: "🎓",
     certificateImage: "/data/images/achievements/achievement-gate.png",
     thumbnail: "/data/images/achievements/achievement-gate.png"
@@ -36,7 +36,7 @@ export const achievementsData = [
     id: 4,
     title: "Academic Excellence Award – B.Tech CSE",
     institution: "Vardhaman College of Engineering",
-    date: null,
+    date: "2022 - 2023",
     rank: "2nd Position in CSE Dept.",
     performance: "Secured 2nd position in the entire CSE department, recognized for outstanding academic performance.",
     icon: "🏅",
@@ -49,7 +49,7 @@ export const achievementsData = [
     institution: "VNRVJIET, Hyderabad",
     date: "Nov 2023",
     rank: "Finalist",
-    performance: "Qualified for the final round of Victory & Joy in Smart Innovations hackathon at VNR VJIET, in collaboration with CSI SBC, Turing Hut, Gamma Club, GDSC & UnPlatforms.",
+    performance: "Led a team to the final round of the VJ Hackathon at VNR VJIET, surpassing over 500 competing teams nationwide.",
     icon: "💻",
     certificateImage: "/data/images/achievements/hackathon-finalist.jpg",
     thumbnail: "/data/images/achievements/hackathon-finalist.jpg"
@@ -64,5 +64,16 @@ export const achievementsData = [
     icon: "🌟",
     certificateImage: "/data/images/achievements/open-source-contributions.png",
     thumbnail: "/data/images/achievements/open-source-contributions.png"
+  },
+  {
+    id: 7,
+    title: "Certificate of Excellence – HackerRank Orchestrate",
+    institution: "HackerRank",
+    date: "May 2026",
+    rank: "100th Place (Global)",
+    performance: "Achieved 100th place globally in building and submitting an autonomous AI Agent during the 24-hour HackerRank Orchestrate challenge.",
+    icon: "🤖",
+    certificateImage: "/data/images/achievements/hackerrank-orchestrate.png",
+    thumbnail: "/data/images/achievements/hackerrank-orchestrate.png"
   }
 ];

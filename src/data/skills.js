@@ -1,16 +1,3 @@
-console.log("[skills.js] Loaded and softSkillsData export is available!");
-
-// Data for soft skills 
-const softSkillsData = [
-  { name: "Problem Solving" },
-  { name: "Attention to Detail" },
-  { name: "Adaptability" },
-  { name: "Self-Learning" },
-  { name: "Communication" },
-  { name: "Teamwork" },
-  { name: "Team Leadership" }
-];
-
 // Data for technical skills 
 const skillsData = {
   programmingLanguages: [
@@ -59,4 +46,4 @@ const skillsData = {
   ]
 };
 
-export { softSkillsData, skillsData };
+export { skillsData };

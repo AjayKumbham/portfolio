@@ -17,17 +17,18 @@ export const experienceData = [
   },
   {
     id: 1,
-    company: "TheSmartBridge",
-    role: "ServiceNow Developer Intern",
+    company: "National Institute of Electronics and Information Technology (NIELIT)",
+    role: "AI/ML Intern",
     type: "Internship",
-    duration: "Oct 2025 – Nov 2025",
+    duration: "Aug 2025 – Oct 2025",
     location: "Remote",
     hasCertificate: false,
     certificateUrl: null,
-    technologies: ["ServiceNow", "Flows", "ATF", "Reports", "Agentic AI"],
+    technologies: ["Python", "NumPy", "Pandas", "scikit-learn", "ML Models", "Matplotlib"],
     responsibilities: [
-      "Completed ServiceNow Virtual Internship Program in collaboration with ServiceNow University, covering platform administration fundamentals, workflow automation, and automated testing framework (ATF) essentials",
-      "Gained hands-on experience in ServiceNow platform configuration, building automated workflows, creating actionable reports, and exploring Agentic AI capabilities aligned with enterprise IT service management practices"
+      "Trained and evaluated ML models (Random Forest, XGBoost, SVM) on datasets of up to 50,000 records, achieving 85%+ accuracy.",
+      "Performed data preprocessing, feature engineering, and hyperparameter tuning to optimize model performance.",
+      "Visualized model performance and data trends using Matplotlib to drive data-informed evaluation."
     ]
   },
   {
