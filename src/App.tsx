@@ -10,7 +10,6 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Achievements from "./pages/Achievements";
 import Experience from "./pages/Experience";
@@ -41,7 +40,6 @@ const AnimatedRoutes = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/experience" element={<Experience />} />

@@ -4,7 +4,13 @@ import { aboutData } from '../data/about';
 import { personalInfo } from '../data/personal';
 import { educationData } from '../data/education';
 import { resumeData } from '../data/resume';
-import { X, Download, Eye, GraduationCap, Calendar, TrendingUp, FileText } from 'lucide-react';
+import { skillsData } from '../data/skills';
+import { 
+  X, Download, Eye, GraduationCap, Calendar, 
+  TrendingUp, FileText, Code, Database, 
+  Layers, Wrench, BookOpen, Settings 
+} from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const About: React.FC = () => {
   const [showResumeModal, setShowResumeModal] = useState(false);
@@ -18,77 +24,76 @@ const About: React.FC = () => {
     document.body.removeChild(link);
   };
 
+  const SkillCategory: React.FC<{ title: string; skills: { name: string }[]; icon: React.ReactNode }> = ({ title, skills, icon }) => (
+    <div className="group flex flex-col sm:flex-row gap-4 sm:gap-12 py-8 border-b border-gray-100 dark:border-gray-800 last:border-0">
+      <div className="sm:w-64 flex-shrink-0 flex items-center gap-4">
+        <div className="p-2.5 rounded-xl bg-gray-50 dark:bg-gray-800 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 transition-all duration-300">
+          {icon}
+        </div>
+        <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
+          {title}
+        </h3>
+      </div>
+      <div className="flex flex-wrap gap-x-8 gap-y-4 items-center">
+        {skills.map((skill, index) => (
+          <div key={index} className="relative group/item">
+            <span className="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200">
+              {skill.name}
+            </span>
+            <div className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover/item:w-full opacity-60"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            {aboutData.intro}
-          </p>
-        </div>
-
-        {/* Profile + Description */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-          {/* Image */}
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl transform rotate-3"></div>
-              <img
-                src={personalInfo.profileImage}
-                alt={personalInfo.name}
-                className="relative w-full max-w-md mx-auto rounded-2xl shadow-xl"
-              />
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="order-1 lg:order-2 space-y-8">
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              {aboutData.description}
-            </p>
-
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What defines me:</h3>
-              <div className="space-y-3">
-                {aboutData.personality.map((trait, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-600 dark:text-gray-300">{trait}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Passions */}
-        <div className="mb-24">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-              What I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Passionate</span> About
-            </h2>
+        {/* Technical Expertise Section */}
+        <div className="mb-32">
+          <div className="text-center mb-16">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+              Technical <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expertise</span>
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400 text-base mt-2">My technical stack and areas of expertise</p>
             <div className="w-12 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {aboutData.passions.map((passion, index) => (
-              <div
-                key={index}
-                className="group p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 border border-gray-200 dark:border-gray-700"
-              >
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                  {passion.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                  {passion.description}
-                </p>
-              </div>
-            ))}
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white dark:bg-gray-900/50 rounded-3xl border border-gray-100 dark:border-gray-800 p-8 sm:p-12 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <SkillCategory
+                title="Programming"
+                skills={skillsData.programmingLanguages}
+                icon={<Code className="w-5 h-5" />}
+              />
+              <SkillCategory
+                title="Web & Frameworks"
+                skills={skillsData.webTechnologies}
+                icon={<Layers className="w-5 h-5" />}
+              />
+              <SkillCategory
+                title="Databases"
+                skills={skillsData.databases}
+                icon={<Database className="w-5 h-5" />}
+              />
+              <SkillCategory
+                title="Cloud & DevOps"
+                skills={skillsData.cloudDevOps}
+                icon={<Wrench className="w-5 h-5" />}
+              />
+              <SkillCategory
+                title="CS Fundamentals"
+                skills={skillsData.csFundamentals}
+                icon={<BookOpen className="w-5 h-5" />}
+              />
+              <SkillCategory
+                title="Tools & Platforms"
+                skills={skillsData.toolsPlatforms}
+                icon={<Settings className="w-5 h-5" />}
+              />
+            </div>
           </div>
         </div>
 
@@ -102,21 +107,16 @@ const About: React.FC = () => {
             <div className="w-12 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4"></div>
           </div>
 
-          {/* Timeline */}
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-transparent transform md:-translate-x-px hidden md:block"></div>
-
             <div className="space-y-8">
               {educationData.map((edu, index) => (
                 <div
                   key={edu.id}
                   className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                 >
-                  {/* Content Card */}
                   <div className="flex-1">
                     <div className="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
-                      {/* Top row */}
                       <div className="flex items-start justify-between gap-4 mb-4">
                         <div className="flex items-center gap-3">
                           <div className="p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex-shrink-0">
@@ -131,8 +131,6 @@ const About: React.FC = () => {
                             </p>
                           </div>
                         </div>
-
-                        {/* Score Badge */}
                         <div className="flex-shrink-0">
                           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold rounded-full whitespace-nowrap">
                             <TrendingUp className="w-3 h-3" />
@@ -140,8 +138,6 @@ const About: React.FC = () => {
                           </span>
                         </div>
                       </div>
-
-                      {/* Bottom row */}
                       <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
                         <p className="text-xs text-gray-500 dark:text-gray-400">
                           {edu.university}
@@ -153,13 +149,9 @@ const About: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* Timeline dot – center (md) */}
                   <div className="hidden md:flex items-start justify-center w-12 flex-shrink-0 pt-5">
                     <div className="w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 border-2 border-white dark:border-gray-900 shadow-md ring-2 ring-blue-500/30"></div>
                   </div>
-
-                  {/* Empty half for alternating layout */}
                   <div className="flex-1 hidden md:block"></div>
                 </div>
               ))}
@@ -169,20 +161,13 @@ const About: React.FC = () => {
 
         {/* Resume Section */}
         <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700">
-          {/* Background accent */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900"></div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-500/10 to-transparent rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
-
           <div className="relative flex flex-col md:flex-row items-center gap-8 p-8 md:p-12">
-            {/* Icon block */}
             <div className="flex-shrink-0">
               <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
                 <FileText className="w-9 h-9 text-white" />
               </div>
             </div>
-
-            {/* Text */}
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                 My Resume
@@ -194,8 +179,6 @@ const About: React.FC = () => {
                 Last updated: {resumeData.lastUpdated}
               </p>
             </div>
-
-            {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
               <button
                 onClick={handleDownload}
@@ -204,7 +187,6 @@ const About: React.FC = () => {
                 <Download className="w-4 h-4 group-hover:animate-bounce" />
                 Download PDF
               </button>
-
               <button
                 onClick={() => setShowResumeModal(true)}
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-lg font-semibold text-sm hover:border-blue-500 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:-translate-y-0.5"
@@ -222,7 +204,6 @@ const About: React.FC = () => {
       {showResumeModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="relative w-full max-w-5xl max-h-[90vh] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in duration-300">
-            {/* Modal Header */}
             <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
@@ -247,8 +228,6 @@ const About: React.FC = () => {
                 </button>
               </div>
             </div>
-
-            {/* Modal Content */}
             <div className="flex-1 bg-gray-50 dark:bg-gray-800 h-[calc(90vh-73px)]">
               <iframe
                 src={`${resumeData.pdfPath}#toolbar=0&navpanes=0`}
