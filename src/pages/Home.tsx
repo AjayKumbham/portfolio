@@ -52,6 +52,7 @@ const Home: React.FC = () => {
                   </span>
                 </h1>
 
+
                 <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0">
                   {homeData.tagline}
                 </p>
