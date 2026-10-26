@@ -15,12 +15,15 @@ const techColorPalette = [
 
 const ExperienceCard = ({ experience, onViewCertificate }) => {
   const getTypeStyles = (type) => {
+    const normalized = type?.toLowerCase().replace(/[\s-_]+/g, '');
     const styles = {
       internship: "bg-emerald-100 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-800",
       casestudy: "bg-violet-100 text-violet-700 border-violet-200 dark:bg-violet-900/30 dark:text-violet-400 dark:border-violet-800",
-      project: "bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800"
+      project: "bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800",
+      contract: "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800",
+      fulltime: "bg-indigo-100 text-indigo-700 border-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-400 dark:border-indigo-800"
     };
-    return styles[type?.toLowerCase()] || styles.internship;
+    return styles[normalized] || styles.internship;
   };
 
   return (
@@ -103,8 +106,7 @@ const ExperienceCard = ({ experience, onViewCertificate }) => {
 
           {/* Responsibilities */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="h-1 w-1 rounded-full bg-purple-500" />
+            <div className="mb-4">
               <h4 className="font-bold text-sm uppercase tracking-wide text-gray-900 dark:text-white">
                 Impact & Contributions
               </h4>

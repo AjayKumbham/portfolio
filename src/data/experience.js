@@ -1,18 +1,41 @@
 export const experienceData = [
   {
+    id: 5,
+    company: "AutoRABIT",
+    role: "Associate Software Engineer",
+    type: "Internship",
+    duration: "Jun 2026 – Present",
+    location: "Hyderabad, India",
+    hasCertificate: false,
+    certificateUrl: null,
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Angular",
+      "Docker",
+      "AWS",
+      "Git",
+      "Microservices"
+    ],
+    responsibilities: [
+      "Engineered and resolved complex bug fixes and delivered feature user stories for ARM (Automated Release Management), AutoRABIT's flagship enterprise release management platform.",
+      "Authored robust integration tests for core modules including CI Jobs and Version Control, verifying end-to-end functionality and preventing deployment regressions.",
+      "Contributed to server CPU utilization optimization through code-level improvements without altering existing product behavior."
+    ]
+  },
+  {
     id: 4,
     company: "HackerRank",
-    role: "Spring Boot Subject Matter Expert (SME)",
+    role: "Subject Matter Expert (SME)",
     type: "Contract",
     duration: "Apr 2026 – Present",
     location: "Remote",
     hasCertificate: false,
     certificateUrl: null,
-    technologies: ["Spring Boot", "Java"],
+    technologies: ["Java", "Spring Boot", "Python", "FastAPI", "Node.js", "JavaScript"],
     responsibilities: [
-      "Created and validated Spring Boot-based coding problems focusing on real-world backend scenarios",
-      "Reviewed and benchmarked candidate solutions for correctness, performance, and scalability",
-      "Designed test cases and evaluation criteria to ensure robust and fair assessment standards"
+      "Developed and validated technical assessments across Backend Development, Machine Learning, Data Science, and Generative AI",
+      "Designed test cases and evaluation criteria, and benchmarked assessments to ensure they met quality and assessment standards"
     ]
   },
   {
